@@ -11,14 +11,6 @@ export const cars: Car[] = [
     type: 'Sedan',
     description: 'A comfortable and economical choice for city travel and small families. Perfect for 4 passengers plus a driver.',
     features: ['Air Conditioning', 'Music System', 'Spacious Legroom'],
-    pricing: {
-      local: [
-        { name: '4-hr/40-km', price: 1200 },
-        { name: '8-hr/80-km', price: 2200 },
-      ],
-      outstation: { perKm: 11, driverAllowance: 300 },
-      airport: { name: 'Jabalpur Airport Transfer', price: 900 },
-    },
   },
   {
     id: '2',
@@ -30,14 +22,6 @@ export const cars: Car[] = [
     type: 'SUV',
     description: 'The perfect MUV for family trips and outstation travel, seating 7 passengers plus a driver. Offers premium comfort and space.',
     features: ['Air Conditioning', 'Captain Seats', 'Premium Audio', 'Extra Baggage Space'],
-    pricing: {
-      local: [
-        { name: '4-hr/40-km', price: 2000 },
-        { name: '8-hr/80-km', price: 3500 },
-      ],
-      outstation: { perKm: 16, driverAllowance: 400 },
-      airport: { name: 'Jabalpur Airport Transfer', price: 1600 },
-    },
   },
   {
     id: '3',
@@ -49,14 +33,6 @@ export const cars: Car[] = [
     type: 'Van',
     description: 'Ideal for large groups and family functions, accommodating 12 passengers plus a driver. Ensures a comfortable journey for everyone.',
     features: ['Air Conditioning', 'Ample Legroom', 'Pushback Seats', 'Music System'],
-    pricing: {
-      local: [
-        { name: '4-hr/40-km', price: 3500 },
-        { name: '8-hr/80-km', price: 5500 },
-      ],
-      outstation: { perKm: 24, driverAllowance: 500 },
-      airport: { name: 'Jabalpur Airport Transfer', price: 2800 },
-    },
   },
     {
     id: '4',
@@ -68,14 +44,6 @@ export const cars: Car[] = [
     type: 'Van',
     description: 'For very large groups, corporate events, or wedding parties. This 24+1 seater bus provides maximum capacity without sacrificing comfort.',
     features: ['Air Conditioning', 'Spacious Seating', 'Luggage Carrier', 'Sound System'],
-    pricing: {
-      local: [
-        { name: '4-hr/40-km', price: 5500 },
-        { name: '8-hr/80-km', price: 8500 },
-      ],
-      outstation: { perKm: 35, driverAllowance: 600 },
-      airport: { name: 'Jabalpur Airport Transfer', price: 4500 },
-    },
   },
 ];
 
@@ -115,7 +83,7 @@ export const faqs: FAQ[] = [
     },
     {
         question: 'How is the outstation fare calculated?',
-        answer: 'Outstation fare is calculated based on a per-kilometer rate, plus a daily driver allowance. A minimum of 250-300 km is typically charged per day, depending on the route. Prices may vary based on vehicle type.'
+        answer: 'Outstation fare is calculated based on a per-kilometer rate, plus a daily driver allowance. A minimum of 250-300 km is typically charged per day, depending on the route. Prices vary based on vehicle type and are provided on request.'
     },
     {
         question: 'Who pays for toll, parking, and state taxes?',

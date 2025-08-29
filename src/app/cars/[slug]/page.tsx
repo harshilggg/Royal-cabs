@@ -4,8 +4,7 @@ import { cars } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { BaggageClaim, CheckCircle, IndianRupee, Phone, Users } from 'lucide-react';
+import { BaggageClaim, CheckCircle, Phone, Users } from 'lucide-react';
 import type { Metadata } from 'next';
 
 type Props = {
@@ -23,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: `${car.name} - Royal Cabs`,
-    description: `Details and pricing for ${car.name}. Capacity: ${car.capacity} passengers. ${car.description}`,
+    description: `Details for ${car.name}. Capacity: ${car.capacity} passengers. ${car.description}`,
   };
 }
 
@@ -77,57 +76,18 @@ export default function CarDetailPage({ params }: { params: { slug: string } }) 
            </div>
         </div>
 
-        {/* Pricing and Booking */}
+        {/* Booking */}
         <div>
           <Card className="shadow-lg">
             <CardHeader>
-              <CardTitle className="text-2xl">Pricing & Booking</CardTitle>
+              <CardTitle className="text-2xl">Book This Car</CardTitle>
             </CardHeader>
             <CardContent>
-              <Tabs defaultValue="local" className="w-full">
-                <TabsList className="grid w-full grid-cols-3">
-                  <TabsTrigger value="local">Local</TabsTrigger>
-                  <TabsTrigger value="outstation">Outstation</TabsTrigger>
-                  <TabsTrigger value="airport">Airport</TabsTrigger>
-                </TabsList>
-                <TabsContent value="local" className="mt-6">
-                    <h4 className="font-semibold text-lg mb-4">Local Packages</h4>
-                    <div className="space-y-3">
-                        {car.pricing.local.map(pkg => (
-                            <div key={pkg.name} className="flex justify-between items-center p-3 bg-background rounded-md">
-                                <span className="text-muted-foreground">{pkg.name}</span>
-                                <span className="font-bold flex items-center"><IndianRupee className="h-4 w-4 mr-1"/>{pkg.price.toLocaleString()}</span>
-                            </div>
-                        ))}
-                    </div>
-                </TabsContent>
-                <TabsContent value="outstation" className="mt-6">
-                    <h4 className="font-semibold text-lg mb-4">Outstation Rates</h4>
-                    <div className="space-y-3">
-                         <div className="flex justify-between items-center p-3 bg-background rounded-md">
-                            <span className="text-muted-foreground">Rate per KM</span>
-                            <span className="font-bold flex items-center"><IndianRupee className="h-4 w-4 mr-1"/>{car.pricing.outstation.perKm}/km</span>
-                        </div>
-                        <div className="flex justify-between items-center p-3 bg-background rounded-md">
-                            <span className="text-muted-foreground">Driver Allowance (per day)</span>
-                            <span className="font-bold flex items-center"><IndianRupee className="h-4 w-4 mr-1"/>{car.pricing.outstation.driverAllowance}</span>
-                        </div>
-                    </div>
-                    <p className="text-xs text-muted-foreground mt-4">*Price varies based on vehicle type and availability. Toll, parking, and state taxes extra as applicable.</p>
-                </TabsContent>
-                <TabsContent value="airport" className="mt-6">
-                    <h4 className="font-semibold text-lg mb-4">Airport Transfer</h4>
-                    <div className="space-y-3">
-                        <div className="flex justify-between items-center p-3 bg-background rounded-md">
-                            <span className="text-muted-foreground">{car.pricing.airport.name}</span>
-                            <span className="font-bold flex items-center"><IndianRupee className="h-4 w-4 mr-1"/>{car.pricing.airport.price.toLocaleString()}</span>
-                        </div>
-                    </div>
-                    <p className="text-xs text-muted-foreground mt-4">*Includes pickup/drop-off. Parking extra.</p>
-                </TabsContent>
-              </Tabs>
-              <Button asChild size="lg" className="w-full mt-8 transition-transform hover:scale-105">
-                <a href={`https://wa.me/917999114272?text=Hi!%20I'd%20like%20to%20book%20a%20${encodeURIComponent(car.name)}.`} target="_blank" rel="noopener noreferrer">
+              <p className="text-muted-foreground mb-6">
+                To book this car or inquire about pricing, please contact us directly on WhatsApp. We'll get back to you with a quote as soon as possible.
+              </p>
+              <Button asChild size="lg" className="w-full transition-transform hover:scale-105">
+                <a href={`https://wa.me/917999114272?text=Hi!%20I'd%20like%20to%20book%20a%20cab.`} target="_blank" rel="noopener noreferrer">
                     <Phone className="mr-2 h-5 w-5" /> Book on WhatsApp
                 </a>
               </Button>

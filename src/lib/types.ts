@@ -6,20 +6,6 @@ export interface Car {
   capacity: number;
   baggage: number;
   type: 'Sedan' | 'SUV' | 'Van' | 'Hatchback';
-  pricing: {
-    local: {
-      name: string;
-      price: number;
-    }[];
-    outstation: {
-      perKm: number;
-      driverAllowance: number;
-    };
-    airport: {
-      name: string;
-      price: number;
-    };
-  };
   description: string;
   features: string[];
 }
