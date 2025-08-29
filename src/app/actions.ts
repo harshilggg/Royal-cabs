@@ -1,6 +1,7 @@
 'use server';
 
 import { z } from 'zod';
+import nodemailer from 'nodemailer';
 
 const leadSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
@@ -43,16 +44,38 @@ export async function captureLead(
   const data = validatedFields.data;
 
   try {
-    // In a real application, you would save the data to a database like Firestore.
-    // e.g., await db.collection('leads').add(data);
-    console.log('New lead captured:', data);
+    const transporter = nodemailer.createTransport({
+      host: process.env.EMAIL_SERVER_HOST,
+      port: Number(process.env.EMAIL_SERVER_PORT),
+      secure: process.env.EMAIL_SERVER_PORT === '465', // true for 465, false for other ports
+      auth: {
+        user: process.env.EMAIL_SERVER_USER,
+        pass: process.env.EMAIL_SERVER_PASSWORD,
+      },
+    });
 
-    // Simulate network delay
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    const mailOptions = {
+      from: `"${data.name}" <${process.env.EMAIL_FROM}>`,
+      to: 'royalcabs31@gmail.com',
+      subject: 'New Cab Inquiry from Website',
+      html: `
+        <h1>New Cab Inquiry</h1>
+        <p><strong>Name:</strong> ${data.name}</p>
+        <p><strong>Email:</strong> ${data.email}</p>
+        <p><strong>Phone:</strong> ${data.phone}</p>
+        <p><strong>Trip Details:</strong></p>
+        <p>${data.details}</p>
+      `,
+    };
+
+    await transporter.sendMail(mailOptions);
+    
+    console.log('New lead captured and email sent:', data);
 
     return { message: 'Thank you for your inquiry! We will get back to you shortly.', success: true };
 
   } catch (e) {
+    console.error('Error sending email:', e);
     return {
       message: 'An unexpected error occurred. Please try again.',
       success: false,
