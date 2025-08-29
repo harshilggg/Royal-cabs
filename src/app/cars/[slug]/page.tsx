@@ -40,6 +40,8 @@ export default function CarDetailPage({ params }: { params: { slug: string } }) 
     notFound();
   }
 
+  const bookingMessage = `Hi! I'd like to book a cab (${car.name})`;
+
   return (
     <div className="container mx-auto px-4 py-12 md:py-20">
       <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
@@ -87,7 +89,7 @@ export default function CarDetailPage({ params }: { params: { slug: string } }) 
                 To book this car or inquire about pricing, please contact us directly on WhatsApp. We'll get back to you with a quote as soon as possible.
               </p>
               <Button asChild size="lg" className="w-full transition-transform hover:scale-105">
-                <a href={`https://wa.me/917999114272?text=Hi!%20I'd%20like%20to%20book%20a%20cab.`} target="_blank" rel="noopener noreferrer">
+                <a href={`https://wa.me/917999114272?text=${encodeURIComponent(bookingMessage)}`} target="_blank" rel="noopener noreferrer">
                     <Phone className="mr-2 h-5 w-5" /> Book on WhatsApp
                 </a>
               </Button>

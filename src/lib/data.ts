@@ -5,7 +5,7 @@ export const cars: Car[] = [
     id: '1',
     name: 'Maruti Suzuki Dzire',
     slug: 'maruti-suzuki-dzire',
-    image: 'https://imgd.aeplcdn.com/1280x720/n/cw/ec/130591/fronx-exterior-right-front-three-quarter-109.jpeg?isig=0',
+    image: 'https://imgd.aeplcdn.com/1280x720/n/cw/ec/45691/dzire-exterior-right-front-three-quarter.jpeg?q=80',
     capacity: 5, // 4+1
     baggage: 2,
     type: 'Sedan',
@@ -14,6 +14,17 @@ export const cars: Car[] = [
   },
   {
     id: '2',
+    name: 'Kia Carens',
+    slug: 'kia-carens',
+    image: 'https://imgd.aeplcdn.com/1280x720/n/cw/ec/1/versions/kia-carens-prestige-plus-1-5-turbo-dct-7-seater.jpg?q=80',
+    capacity: 8, // 7+1
+    baggage: 4,
+    type: 'SUV',
+    description: 'A stylish and modern SUV with flexible seating, perfect for families who need extra space and comfort.',
+    features: ['Air Conditioning', 'Premium Audio', 'Sunroof', 'Spacious Interior'],
+  },
+  {
+    id: '3',
     name: 'Toyota Innova Crysta',
     slug: 'toyota-innova-crysta',
     image: 'https://imgd.aeplcdn.com/1280x720/n/cw/ec/140809/innova-crysta-exterior-right-front-three-quarter.jpeg?isig=0',
@@ -24,24 +35,35 @@ export const cars: Car[] = [
     features: ['Air Conditioning', 'Captain Seats', 'Premium Audio', 'Extra Baggage Space'],
   },
   {
-    id: '3',
-    name: 'Tempo Traveller (12 Seater)',
-    slug: 'tempo-traveller-12-seater',
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGu7M5X_kyXBETC4Sg6W_2-d2j2eL5y1O43w&s',
+    id: '4',
+    name: 'Tempo Traveller',
+    slug: 'tempo-traveller',
+    image: 'https://imgd.aeplcdn.com/1280x720/n/cw/ec/49385/force-traveller-3700-exterior-2.jpeg?q=80',
     capacity: 13, // 12+1
     baggage: 10,
     type: 'Van',
     description: 'Ideal for large groups and family functions, accommodating 12 passengers plus a driver. Ensures a comfortable journey for everyone.',
     features: ['Air Conditioning', 'Ample Legroom', 'Pushback Seats', 'Music System'],
   },
-    {
-    id: '4',
-    name: 'Tempo Traveller (24 Seater)',
-    slug: 'tempo-traveller-24-seater',
-    image: 'https://5.imimg.com/data5/SELLER/Default/2023/2/ZC/GR/HW/11835775/25-seater-tempo-traveller-rental-service.jpg',
+  {
+    id: '5',
+    name: 'Force Urbania',
+    slug: 'force-urbania',
+    image: 'https://imgd.aeplcdn.com/1280x720/n/cw/ec/139785/urbania-exterior-right-front-three-quarter.jpeg?isig=0&q=80',
+    capacity: 18, // 17+1
+    baggage: 15,
+    type: 'Van',
+    description: 'A premium and spacious van for larger groups seeking extra comfort and a touch of luxury on their travels.',
+    features: ['Air Conditioning', 'Reclining Seats', 'LED Lights', 'Ample Space'],
+  },
+  {
+    id: '6',
+    name: 'Bus',
+    slug: 'bus',
+    image: 'https://imgd.aeplcdn.com/1280x720/n/cw/ec/158721/tata-starbus-ev-4-12-low-entry-ac-bs-vi-exterior-0.jpeg?q=80',
     capacity: 25, // 24+1
     baggage: 20,
-    type: 'Van',
+    type: 'Bus',
     description: 'For very large groups, corporate events, or wedding parties. This 24+1 seater bus provides maximum capacity without sacrificing comfort.',
     features: ['Air Conditioning', 'Spacious Seating', 'Luggage Carrier', 'Sound System'],
   },
@@ -83,7 +105,7 @@ export const faqs: FAQ[] = [
     },
     {
         question: 'How is the outstation fare calculated?',
-        answer: 'Outstation fare is calculated based on a per-kilometer rate, plus a daily driver allowance. A minimum of 250-300 km is typically charged per day, depending on the route. Prices vary based on vehicle type and are provided on request.'
+        answer: 'Outstation fare is calculated based on a per-kilometer rate, plus a daily driver allowance. A minimum of 250-300 km is typically charged per day, depending on the route. Prices may vary based on vehicle type.'
     },
     {
         question: 'Who pays for toll, parking, and state taxes?',

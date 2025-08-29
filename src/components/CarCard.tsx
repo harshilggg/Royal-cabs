@@ -19,6 +19,9 @@ interface CarCardProps {
 }
 
 export function CarCard({ car }: CarCardProps) {
+
+  const bookingMessage = `Hi! I'd like to book a cab (${car.name})`;
+
   return (
     <Card className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 h-full group">
       <CardHeader className="p-0">
@@ -53,9 +56,9 @@ export function CarCard({ car }: CarCardProps) {
       </CardContent>
       <CardFooter className="p-6 pt-0 bg-secondary/30">
         <Button asChild className="w-full" variant="default">
-          <Link href={`/cars/${car.slug}`}>
+          <a href={`https://wa.me/917999114272?text=${encodeURIComponent(bookingMessage)}`} target="_blank" rel="noopener noreferrer">
             Book Now <ArrowRight className="ml-2 h-4 w-4" />
-          </Link>
+          </a>
         </Button>
       </CardFooter>
     </Card>
