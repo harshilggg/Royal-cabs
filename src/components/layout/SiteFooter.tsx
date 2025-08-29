@@ -12,7 +12,7 @@ export function SiteFooter() {
               <span className="font-bold text-xl font-headline">Royal Cabs</span>
             </Link>
             <p className="text-muted-foreground text-sm">
-              Your trusted partner for premium cab services in Madhya Pradesh and beyond.
+              Your trusted partner for premium cab services in Madhya Pradesh and beyond. Owned and operated by Manoj Kumar Gupta.
             </p>
           </div>
           
@@ -40,15 +40,15 @@ export function SiteFooter() {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="h-4 w-4 mt-1 mr-3 text-muted-foreground flex-shrink-0" />
-                <span className="text-sm text-muted-foreground">123 MG Road, Indore, MP 452001</span>
+                <span className="text-sm text-muted-foreground">Near Ganga Nagar, Jabalpur, MP 482002</span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-4 w-4 mr-3 text-muted-foreground flex-shrink-0" />
-                <a href="tel:+919876543210" className="text-sm text-muted-foreground hover:text-primary">+91 98765 43210</a>
+                <a href="tel:+917999114272" className="text-sm text-muted-foreground hover:text-primary">+91 79991 14272</a>
               </li>
               <li className="flex items-center">
                 <Mail className="h-4 w-4 mr-3 text-muted-foreground flex-shrink-0" />
-                <a href="mailto:booking@royalcabs.example.com" className="text-sm text-muted-foreground hover:text-primary">booking@royalcabs.example.com</a>
+                <a href="mailto:royalcabs31@gmail.com" className="text-sm text-muted-foreground hover:text-primary">royalcabs31@gmail.com</a>
               </li>
             </ul>
           </div>

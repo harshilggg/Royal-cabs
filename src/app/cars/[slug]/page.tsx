@@ -113,7 +113,7 @@ export default function CarDetailPage({ params }: { params: { slug: string } }) 
                             <span className="font-bold flex items-center"><IndianRupee className="h-4 w-4 mr-1"/>{car.pricing.outstation.driverAllowance}</span>
                         </div>
                     </div>
-                    <p className="text-xs text-muted-foreground mt-4">*Toll, parking, and state taxes extra as applicable.</p>
+                    <p className="text-xs text-muted-foreground mt-4">*Price varies based on vehicle type and availability. Toll, parking, and state taxes extra as applicable.</p>
                 </TabsContent>
                 <TabsContent value="airport" className="mt-6">
                     <h4 className="font-semibold text-lg mb-4">Airport Transfer</h4>
@@ -127,7 +127,7 @@ export default function CarDetailPage({ params }: { params: { slug: string } }) 
                 </TabsContent>
               </Tabs>
               <Button asChild size="lg" className="w-full mt-8 transition-transform hover:scale-105">
-                <a href={`https://wa.me/919876543210?text=Hi!%20I'd%20like%20to%20book%20a%20${encodeURIComponent(car.name)}.`} target="_blank" rel="noopener noreferrer">
+                <a href={`https://wa.me/917999114272?text=Hi!%20I'd%20like%20to%20book%20a%20${encodeURIComponent(car.name)}.`} target="_blank" rel="noopener noreferrer">
                     <Phone className="mr-2 h-5 w-5" /> Book on WhatsApp
                 </a>
               </Button>

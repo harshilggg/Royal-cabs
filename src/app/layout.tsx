@@ -21,8 +21,8 @@ const fontPTSans = PT_Sans({
 
 export const metadata: Metadata = {
   title: 'Royal Cabs - Premium Taxi Service in Madhya Pradesh',
-  description: 'Reliable and affordable cab service for local, outstation, and airport transfers in Indore, Bhopal, Ujjain, and across Madhya Pradesh.',
-  keywords: 'taxi service, cab service, madhya pradesh, indore, bhopal, ujjain, airport transfer, outstation cabs',
+  description: 'Reliable and affordable cab service for local, outstation, and airport transfers in Jabalpur, Indore, Bhopal, Ujjain, and across Madhya Pradesh.',
+  keywords: 'taxi service, cab service, madhya pradesh, jabalpur, indore, bhopal, ujjain, airport transfer, outstation cabs',
 };
 
 export default function RootLayout({
@@ -35,13 +35,13 @@ export default function RootLayout({
     '@type': 'LocalBusiness',
     name: 'Royal Cabs',
     description: 'Premium Taxi and Cab Service in Madhya Pradesh',
-    telephone: '+91-9876543210',
+    telephone: '+91-79991-14272',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '123 MG Road',
-      addressLocality: 'Indore',
+      streetAddress: 'Near Ganga Nagar',
+      addressLocality: 'Jabalpur',
       addressRegion: 'MP',
-      postalCode: '452001',
+      postalCode: '482002',
       addressCountry: 'IN'
     },
     url: 'https://royalcabs.example.com',

@@ -23,20 +23,24 @@ export default function ContactPage() {
               <div>
                 <h2 className="text-2xl font-bold mb-4 text-primary">Contact Information</h2>
                 <p className="text-muted-foreground mb-6">
-                  For immediate assistance or bookings, feel free to reach out to us directly through phone or email.
+                  For immediate assistance or bookings, feel free to reach out to us directly through phone or email. Our team is centered in Jabalpur and serves all of MP.
                 </p>
                 <ul className="space-y-4">
                   <li className="flex items-center">
                     <Phone className="h-5 w-5 mr-3 text-primary" />
-                    <a href="tel:+919876543210" className="text-foreground hover:text-primary">+91 98765 43210</a>
+                    <a href="tel:+917999114272" className="text-foreground hover:text-primary">+91 79991 14272</a>
+                  </li>
+                   <li className="flex items-center">
+                    <Phone className="h-5 w-5 mr-3 text-primary" />
+                    <a href="tel:+919301267318" className="text-foreground hover:text-primary">+91 93012 67318</a>
                   </li>
                   <li className="flex items-center">
                     <Mail className="h-5 w-5 mr-3 text-primary" />
-                    <a href="mailto:booking@royalcabs.example.com" className="text-foreground hover:text-primary">booking@royalcabs.example.com</a>
+                    <a href="mailto:royalcabs31@gmail.com" className="text-foreground hover:text-primary">royalcabs31@gmail.com</a>
                   </li>
                    <li className="flex items-start">
                     <MapPin className="h-5 w-5 mt-1 mr-3 text-primary flex-shrink-0" />
-                    <span className="text-foreground">123 MG Road, Indore, MP 452001</span>
+                    <span className="text-foreground">Near Ganga Nagar, Jabalpur, MP 482002</span>
                   </li>
                 </ul>
               </div>

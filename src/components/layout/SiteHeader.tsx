@@ -40,7 +40,7 @@ export function SiteHeader() {
               </Link>
             ))}
             <Button asChild className="transition-transform hover:scale-105">
-                <a href="https://wa.me/919876543210?text=Hi!%20I'd%20like%20to%20book%20a%20cab." target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/917999114272?text=Hi!%20I'd%20like%20to%20book%20a%20cab." target="_blank" rel="noopener noreferrer">
                     <Phone className="mr-2 h-4 w-4" /> Book Now
                 </a>
             </Button>
@@ -77,7 +77,7 @@ export function SiteHeader() {
                 </div>
                 <div className="mt-auto border-t pt-4">
                     <Button asChild size="lg" className="w-full">
-                        <a href="https://wa.me/919876543210?text=Hi!%20I'd%20like%20to%20book%20a%20cab." target="_blank" rel="noopener noreferrer">
+                        <a href="https://wa.me/917999114272?text=Hi!%20I'd%20like%20to%20book%20a%20cab." target="_blank" rel="noopener noreferrer">
                             <Phone className="mr-2 h-4 w-4" /> Book on WhatsApp
                         </a>
                     </Button>

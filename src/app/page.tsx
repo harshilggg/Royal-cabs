@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Car, Clock, MapPin, ShieldCheck, Star, ThumbsUp, Wallet } from 'lucide-react';
+import { ArrowRight, Car, Clock, MapPin, ShieldCheck, Star, ThumbsUp, Wallet, Award } from 'lucide-react';
 import {
   Accordion,
   AccordionContent,
@@ -26,20 +26,20 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-[70vh] md:h-[90vh] w-full flex items-center justify-center text-center text-white">
         <Image
-          src="https://picsum.photos/1920/1080"
+          src="https://picsum.photos/1920/1080?grayscale&blur=2"
           alt="Royal Cabs taxi driving on a scenic road"
           data-ai-hint="luxury car front"
           fill
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
         <div className="relative z-10 max-w-4xl px-4 flex flex-col items-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white drop-shadow-lg font-headline">
             Where Luxury Meets Budget
           </h1>
           <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto text-gray-200 drop-shadow-md">
-            Experience premium taxi services across Madhya Pradesh. Unmatched comfort, reliability, and style.
+            Experience premium taxi services across Madhya Pradesh. Unmatched comfort, reliability, and style for over 23 years.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4 w-full max-w-md">
             <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg transition-transform hover:scale-105 flex-1">
@@ -80,10 +80,10 @@ export default function Home() {
             </div>
             <div className="text-center p-6 bg-background rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="inline-block p-4 bg-primary text-primary-foreground rounded-full mb-4">
-                <Clock className="h-8 w-8" />
+                <Award className="h-8 w-8" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">24/7 Service</h3>
-              <p className="text-muted-foreground">We are available around the clock to cater to your travel needs.</p>
+              <h3 className="text-xl font-semibold mb-2">23+ Years of Service</h3>
+              <p className="text-muted-foreground">Proudly serving Madhya Pradesh with reliable transport for over two decades.</p>
             </div>
             <div className="text-center p-6 bg-background rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="inline-block p-4 bg-primary text-primary-foreground rounded-full mb-4">
@@ -102,7 +102,7 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-primary">Explore Our Fleet</h2>
             <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
-              A diverse range of vehicles to suit every need and occasion.
+              A diverse range of vehicles to suit every need and occasion, from solo trips to large group travel.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
