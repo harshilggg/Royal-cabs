@@ -26,14 +26,14 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-[70vh] md:h-[90vh] w-full flex items-center justify-center text-center text-white">
         <Image
-          src="https://picsum.photos/1920/1080?grayscale&blur=2"
+          src="https://picsum.photos/1920/1080"
           alt="Royal Cabs taxi driving on a scenic road"
           data-ai-hint="luxury car front"
           fill
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent" />
         <div className="relative z-10 max-w-4xl px-4 flex flex-col items-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white drop-shadow-lg font-headline">
             Where Luxury Meets Budget
@@ -42,13 +42,13 @@ export default function Home() {
             Experience premium taxi services across Madhya Pradesh. Unmatched comfort, reliability, and style for over 23 years.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4 w-full max-w-md">
-            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg transition-transform hover:scale-105 flex-1">
+            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg transition-transform hover:scale-105">
               <Link href="/cars">
                 Book Your Ride <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="secondary" className="shadow-lg transition-transform hover:scale-105 flex-1">
-              <Link href="/contact">Request a Quote</Link>
+            <Button asChild size="lg" variant="secondary" className="shadow-lg transition-transform hover:scale-105">
+              <Link href="/contact">Contact Now</Link>
             </Button>
           </div>
         </div>
@@ -138,7 +138,7 @@ export default function Home() {
           >
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="sm:basis-1/2">
+                <CarouselItem key={index} className="sm:basis-1/2 lg:basis-1/3">
                   <div className="p-4 h-full">
                     <Card className="h-full flex flex-col justify-between shadow-lg">
                       <CardHeader className="pb-4">
