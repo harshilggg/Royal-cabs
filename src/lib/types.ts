@@ -5,6 +5,7 @@ export interface Car {
   image: string;
   capacity: number;
   baggage: number;
+  type: 'Sedan' | 'SUV' | 'Van' | 'Hatchback';
   pricing: {
     local: {
       name: string;

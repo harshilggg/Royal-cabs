@@ -24,30 +24,30 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-center text-white">
+      <section className="relative h-[70vh] md:h-[90vh] w-full flex items-center justify-center text-center text-white">
         <Image
           src="https://picsum.photos/1920/1080"
           alt="Royal Cabs taxi driving on a scenic road"
-          data-ai-hint="scenic road car"
+          data-ai-hint="luxury car front"
           fill
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 max-w-4xl px-4">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-transparent" />
+        <div className="relative z-10 max-w-4xl px-4 flex flex-col items-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white drop-shadow-lg font-headline">
-            Your Royal Journey Begins Here
+            Where Luxury Meets Budget
           </h1>
           <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto text-gray-200 drop-shadow-md">
             Experience premium taxi services across Madhya Pradesh. Unmatched comfort, reliability, and style.
           </p>
-          <div className="mt-8 flex justify-center gap-4">
-            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg transition-transform hover:scale-105">
+          <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4 w-full max-w-md">
+            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg transition-transform hover:scale-105 flex-1">
               <Link href="/cars">
-                Explore Our Fleet <ArrowRight className="ml-2 h-5 w-5" />
+                Book Your Ride <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="secondary" className="shadow-lg transition-transform hover:scale-105">
+            <Button asChild size="lg" variant="secondary" className="shadow-lg transition-transform hover:scale-105 flex-1">
               <Link href="/contact">Request a Quote</Link>
             </Button>
           </div>

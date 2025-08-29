@@ -8,6 +8,7 @@ export const cars: Car[] = [
     image: 'https://picsum.photos/600/400',
     capacity: 4,
     baggage: 2,
+    type: 'Sedan',
     description: 'A comfortable and economical choice for city travel and small families. Known for its fuel efficiency and reliability.',
     features: ['Air Conditioning', 'Music System', 'Spacious Legroom'],
     pricing: {
@@ -23,9 +24,10 @@ export const cars: Car[] = [
     id: '2',
     name: 'Toyota Innova Crysta',
     slug: 'toyota-innova-crysta',
-    image: 'https://picsum.photos/600/400',
+    image: 'https://picsum.photos/600/401',
     capacity: 6,
     baggage: 5,
+    type: 'SUV',
     description: 'The perfect MUV for family trips and outstation travel. Offers premium comfort, space, and a powerful engine for a smooth ride.',
     features: ['Air Conditioning', 'Captain Seats', 'Premium Audio', 'Extra Baggage Space'],
     pricing: {
@@ -41,9 +43,10 @@ export const cars: Car[] = [
     id: '3',
     name: 'Honda City',
     slug: 'honda-city',
-    image: 'https://picsum.photos/600/400',
+    image: 'https://picsum.photos/600/402',
     capacity: 4,
     baggage: 3,
+    type: 'Sedan',
     description: 'A stylish and premium sedan for business travel and a comfortable city experience. Features a sunroof and plush interiors.',
     features: ['Air Conditioning', 'Sunroof', 'Leather Seats', 'Bluetooth Connectivity'],
     pricing: {
@@ -59,9 +62,10 @@ export const cars: Car[] = [
     id: '4',
     name: 'Tempo Traveller',
     slug: 'tempo-traveller',
-    image: 'https://picsum.photos/600/400',
+    image: 'https://picsum.photos/600/403',
     capacity: 12,
     baggage: 10,
+    type: 'Van',
     description: 'Ideal for large groups, family functions, and corporate outings. Spacious seating and ample luggage space ensure a comfortable journey for everyone.',
     features: ['Air Conditioning', 'Ample Legroom', 'Pushback Seats', 'Music System'],
     pricing: {
