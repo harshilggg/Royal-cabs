@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Car, Clock, MapPin, ShieldCheck, Star, ThumbsUp, Wallet, Award } from 'lucide-react';
+import { ArrowRight, Car, Clock, MapPin, ShieldCheck, Star, ThumbsUp, Wallet, Award, CarFront, UserCheck, Timer } from 'lucide-react';
 import {
   Accordion,
   AccordionContent,
@@ -58,7 +58,7 @@ export default function Home() {
 
       {/* Why Choose Us Section */}
       <AnimateOnScroll>
-        <section className="py-16 md:py-24 bg-card">
+        <section className="py-16 md:py-24 bg-card/80 backdrop-blur-sm">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-primary">Why Ride with Royal Cabs?</h2>
@@ -67,30 +67,30 @@ export default function Home() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center p-6 bg-background rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105">
+              <div className="text-center p-6 bg-background/70 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105">
                 <div className="inline-block p-4 bg-primary text-primary-foreground rounded-full mb-4">
                   <ShieldCheck className="h-8 w-8" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Safety First</h3>
                 <p className="text-muted-foreground">Verified drivers and well-maintained cars to ensure your peace of mind.</p>
               </div>
-              <div className="text-center p-6 bg-background rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105">
+              <div className="text-center p-6 bg-background/70 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105">
                 <div className="inline-block p-4 bg-primary text-primary-foreground rounded-full mb-4">
                   <Wallet className="h-8 w-8" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Transparent Pricing</h3>
                 <p className="text-muted-foreground">No hidden charges. See the rates for your trip upfront.</p>
               </div>
-              <div className="text-center p-6 bg-background rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105">
+              <div className="text-center p-6 bg-background/70 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105">
                 <div className="inline-block p-4 bg-primary text-primary-foreground rounded-full mb-4">
-                  <Award className="h-8 w-8" />
+                  <Timer className="h-8 w-8" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">23+ Years of Service</h3>
                 <p className="text-muted-foreground">Proudly serving Madhya Pradesh with reliable transport for over two decades.</p>
               </div>
-              <div className="text-center p-6 bg-background rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105">
+              <div className="text-center p-6 bg-background/70 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105">
                 <div className="inline-block p-4 bg-primary text-primary-foreground rounded-full mb-4">
-                  <ThumbsUp className="h-8 w-8" />
+                  <CarFront className="h-8 w-8" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Top-Notch Comfort</h3>
                 <p className="text-muted-foreground">Clean, comfortable, and air-conditioned vehicles for a pleasant journey.</p>
@@ -128,7 +128,7 @@ export default function Home() {
 
       {/* Testimonials Section */}
       <AnimateOnScroll>
-        <section className="py-16 md:py-24 bg-card">
+        <section className="py-16 md:py-24 bg-card/80 backdrop-blur-sm">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-primary">What Our Customers Say</h2>
@@ -147,7 +147,7 @@ export default function Home() {
                 {testimonials.map((testimonial, index) => (
                   <CarouselItem key={index} className="sm:basis-1/2 lg:basis-1/3">
                     <div className="p-4 h-full">
-                      <Card className="h-full flex flex-col justify-between shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                      <Card className="h-full flex flex-col justify-between shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-background/70">
                         <CardHeader className="pb-4">
                           <div className="flex items-start gap-4">
                             <Avatar>
@@ -181,21 +181,24 @@ export default function Home() {
       {/* FAQ Section */}
       <AnimateOnScroll>
         <section className="py-16 md:py-24">
-          <div className="container mx-auto px-4 max-w-3xl">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary">Frequently Asked Questions</h2>
-              <p className="mt-2 text-lg text-muted-foreground">
-                Have questions? We have answers.
-              </p>
+          <div className="container mx-auto px-4 max-w-3xl relative">
+            <div className="absolute inset-0 bg-background/90 backdrop-blur-sm rounded-lg z-0"></div>
+            <div className="relative z-10">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary">Frequently Asked Questions</h2>
+                <p className="mt-2 text-lg text-muted-foreground">
+                  Have questions? We have answers.
+                </p>
+              </div>
+              <Accordion type="single" collapsible className="w-full">
+                {faqs.map((faq, index) => (
+                  <AccordionItem key={index} value={`item-${index + 1}`}>
+                    <AccordionTrigger className="text-lg text-left">{faq.question}</AccordionTrigger>
+                    <AccordionContent className="text-base text-muted-foreground">{faq.answer}</AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </div>
-            <Accordion type="single" collapsible className="w-full">
-              {faqs.map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index + 1}`}>
-                  <AccordionTrigger className="text-lg text-left">{faq.question}</AccordionTrigger>
-                  <AccordionContent className="text-base text-muted-foreground">{faq.answer}</AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
           </div>
         </section>
       </AnimateOnScroll>

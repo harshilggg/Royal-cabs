@@ -6,6 +6,8 @@ import { SiteHeader } from '@/components/layout/SiteHeader';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { Toaster } from '@/components/ui/toaster';
 import { FloatingWhatsApp } from '@/components/FloatingWhatsApp';
+import { ThemeProvider } from '@/components/ThemeProvider';
+import { BubbleBackground } from '@/components/BubbleBackground';
 
 const fontPoppins = Poppins({
   subsets: ['latin'],
@@ -63,13 +65,21 @@ export default function RootLayout({
           fontPTSans.variable
         )}
       >
-        <div className="relative flex min-h-dvh flex-col bg-background">
-          <SiteHeader />
-          <main className="flex-1">{children}</main>
-          <SiteFooter />
-        </div>
-        <FloatingWhatsApp />
-        <Toaster />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <BubbleBackground />
+          <div className="relative flex min-h-dvh flex-col bg-transparent">
+            <SiteHeader />
+            <main className="flex-1">{children}</main>
+            <SiteFooter />
+          </div>
+          <FloatingWhatsApp />
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );

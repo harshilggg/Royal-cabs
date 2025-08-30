@@ -13,9 +13,8 @@ const generateBubbles = (count: number): Bubble[] => {
     style: {
       '--size': `${Math.random() * 8 + 4}vmin`,
       '--color': `hsl(var(--${['primary', 'secondary', 'accent'][Math.floor(Math.random() * 3)]}) / ${Math.random() * 0.2 + 0.1})`,
-      '--x': `${Math.random() * 100}%`,
-      '--y': `${Math.random() * 100}%`,
-      '--delay': `${Math.random() * 25}s`, // Increased delay for more variation
+      left: `${Math.random() * 100}%`,
+      animationDelay: `${Math.random() * 25}s`,
     } as React.CSSProperties,
   }));
 };
@@ -24,14 +23,13 @@ export function BubbleBackground() {
   const [bubbles, setBubbles] = useState<Bubble[]>([]);
 
   useEffect(() => {
-    // Generate bubbles only on the client-side after initial render
-    setBubbles(generateBubbles(15));
+    setBubbles(generateBubbles(30));
   }, []);
 
   return (
     <div className="bubble-background" aria-hidden="true">
       {bubbles.map(bubble => (
-        <span key={bubble.id} className="bubble" style={bubble.style}></span>
+        <span key={bubble.id} className="bubble" style={{ ...bubble.style, width: 'var(--size)', height: 'var(--size)' }}></span>
       ))}
     </div>
   );

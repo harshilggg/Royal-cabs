@@ -8,6 +8,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 import * as React from 'react';
 import Image from 'next/image';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 const mainNav = [
   { title: 'Home', href: '/' },
@@ -30,8 +31,8 @@ export function SiteHeader() {
 
   return (
     <header className={cn(
-      "sticky top-0 z-50 w-full border-b border-transparent transition-colors duration-300",
-      scrolled ? "border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60" : "bg-transparent"
+      "sticky top-0 z-50 w-full border-b transition-colors duration-300",
+      scrolled ? "border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60" : "bg-transparent border-transparent"
     )}>
       <div className="container flex h-20 max-w-7xl items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
@@ -52,6 +53,7 @@ export function SiteHeader() {
                 {item.title}
               </Link>
             ))}
+            <ThemeToggle />
             <Button asChild className="transition-transform hover:scale-105">
                 <a href="https://wa.me/917999114272?text=Hi!%20I'd%20like%20to%20book%20a%20cab." target="_blank" rel="noopener noreferrer">
                     <Phone className="mr-2 h-4 w-4" /> Book Now
@@ -88,7 +90,8 @@ export function SiteHeader() {
                     </Link>
                   ))}
                 </div>
-                <div className="mt-auto border-t pt-4">
+                <div className="mt-auto border-t pt-4 space-y-4">
+                    <ThemeToggle />
                     <Button asChild size="lg" className="w-full">
                         <a href="https://wa.me/917999114272?text=Hi!%20I'd%20like%20to%20book%20a%20cab." target="_blank" rel="noopener noreferrer">
                             <Phone className="mr-2 h-4 w-4" /> Book on WhatsApp
