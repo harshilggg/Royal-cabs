@@ -25,26 +25,26 @@ export function SiteFooter() {
           </div>
           
           <nav>
-            <h3 className="font-semibold font-headline text-lg mb-4">{t('quickLinks')}</h3>
+            <h3 className="font-bold font-headline text-lg mb-4">{t('quickLinks')}</h3>
             <ul className="space-y-2">
-              <li><Link href="/" className="text-sm text-muted-foreground hover:text-primary">{tNav('home')}</Link></li>
-              <li><Link href="/cars" className="text-sm text-muted-foreground hover:text-primary">{tNav('cars')}</Link></li>
-              <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-primary">{tNav('contact')}</Link></li>
+              <li><Link href="/" className="text-sm text-muted-foreground hover:text-primary font-bold">{tNav('home')}</Link></li>
+              <li><Link href="/cars" className="text-sm text-muted-foreground hover:text-primary font-bold">{tNav('cars')}</Link></li>
+              <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-primary font-bold">{tNav('contact')}</Link></li>
             </ul>
           </nav>
 
           <div>
-            <h3 className="font-semibold font-headline text-lg mb-4">{t('ourServices')}</h3>
+            <h3 className="font-bold font-headline text-lg mb-4">{t('ourServices')}</h3>
             <ul className="space-y-2">
-              <li className="text-sm text-muted-foreground">{t('services.local')}</li>
-              <li className="text-sm text-muted-foreground">{t('services.outstation')}</li>
-              <li className="text-sm text-muted-foreground">{t('services.airport')}</li>
-              <li className="text-sm text-muted-foreground">{t('services.corporate')}</li>
+              <li className="text-sm text-muted-foreground font-bold">{t('services.local')}</li>
+              <li className="text-sm text-muted-foreground font-bold">{t('services.outstation')}</li>
+              <li className="text-sm text-muted-foreground font-bold">{t('services.airport')}</li>
+              <li className="text-sm text-muted-foreground font-bold">{t('services.corporate')}</li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold font-headline text-lg mb-4">{t('getInTouch')}</h3>
+            <h3 className="font-bold font-headline text-lg mb-4">{t('getInTouch')}</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="h-4 w-4 mt-1 mr-3 text-muted-foreground flex-shrink-0" />
@@ -64,7 +64,7 @@ export function SiteFooter() {
         
         <div className="mt-8 border-t pt-6 text-center text-sm text-muted-foreground">
            <TermsDialog>
-             <p className="cursor-pointer hover:text-primary transition-colors">
+             <p className="cursor-pointer hover:text-primary transition-colors font-bold">
                 © 2025 {tNav('brand')}. Terms & Conditions
              </p>
            </TermsDialog>
