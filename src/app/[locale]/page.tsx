@@ -66,6 +66,13 @@ export default function Home() {
         <section className="py-16 md:py-24 bg-card/80 backdrop-blur-sm">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
+              <Image 
+                src="/icons/royal.png" 
+                alt="Royal Cabs Logo" 
+                width={80} 
+                height={80} 
+                className="mx-auto mb-4 rounded-lg"
+              />
               <h2 className="text-3xl md:text-4xl font-bold text-primary">{t('whyChooseUs.title')}</h2>
               <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
                 {t('whyChooseUs.subtitle')}
@@ -110,6 +117,13 @@ export default function Home() {
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
+              <Image 
+                src="/icons/royal.png" 
+                alt="Royal Cabs Logo" 
+                width={80} 
+                height={80} 
+                className="mx-auto mb-4 rounded-lg"
+              />
               <h2 className="text-3xl md:text-4xl font-bold text-primary">{t('ourFleet.title')}</h2>
               <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
                 {t('ourFleet.subtitle')}
@@ -136,6 +150,13 @@ export default function Home() {
         <section className="py-16 md:py-24 bg-card/80 backdrop-blur-sm">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
+              <Image 
+                src="/icons/royal.png" 
+                alt="Royal Cabs Logo" 
+                width={80} 
+                height={80} 
+                className="mx-auto mb-4 rounded-lg"
+              />
               <h2 className="text-3xl md:text-4xl font-bold text-primary">{t('testimonials.title')}</h2>
               <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
                 {t('testimonials.subtitle')}
@@ -188,6 +209,13 @@ export default function Home() {
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4 max-w-3xl">
             <div className="text-center mb-12">
+              <Image 
+                src="/icons/royal.png" 
+                alt="Royal Cabs Logo" 
+                width={80} 
+                height={80} 
+                className="mx-auto mb-4 rounded-lg"
+              />
               <h2 className="text-3xl md:text-4xl font-bold text-primary">{t('faq.title')}</h2>
               <p className="mt-2 text-lg text-muted-foreground">
                 {t('faq.subtitle')}
