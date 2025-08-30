@@ -11,7 +11,7 @@ const generateBubbles = (count: number): Bubble[] => {
   return Array.from({ length: count }).map((_, i) => ({
     id: i,
     style: {
-      '--size': `${Math.random() * 8 + 4}vmin`,
+      '--size': `${Math.random() * 6 + 2}vmin`,
       '--color': `hsl(var(--${['primary', 'secondary', 'accent'][Math.floor(Math.random() * 3)]}) / ${Math.random() * 0.2 + 0.1})`,
       left: `${Math.random() * 100}%`,
       animationDelay: `${Math.random() * 25}s`,

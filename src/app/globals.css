@@ -140,28 +140,22 @@
     bottom: -100px;
     background-color: var(--color);
     border-radius: 50%;
-    opacity: 0.8;
+    opacity: 0.6;
     animation: float 25s infinite ease-in-out;
-    transition: transform 0.3s ease-out;
-    filter: blur(2px);
-  }
-
-  .bubble:hover {
-    transform: scale(1.2);
   }
 
   @keyframes float {
     0% {
-      transform: translateY(0) translateX(0) rotate(0deg);
-      opacity: 0.8;
+      transform: translateY(0) translateX(0vw) rotate(0deg);
+      opacity: 0.6;
     }
     50% {
-      transform: translateY(-50vh) translateX(20vw) rotate(180deg);
-      opacity: 0.4;
+      transform: translateY(-50vh) translateX(10vw) rotate(180deg);
+      opacity: 0.2;
     }
     100% {
-      transform: translateY(-100vh) translateX(-20vw) rotate(360deg);
-      opacity: 0.8;
+      transform: translateY(-100vh) translateX(-10vw) rotate(360deg);
+      opacity: 0.6;
     }
   }
 }
