@@ -1,3 +1,4 @@
+
 import type { Car, Testimonial, FAQ } from '@/lib/types';
 
 export const cars: Car[] = [
@@ -16,7 +17,7 @@ export const cars: Car[] = [
     id: '2',
     name: 'Kia Carens',
     slug: 'kia-carens',
-    images: ['https://imgd.aeplcdn.com/1280x720/n/cw/ec/1/versions/kia-carens-prestige-plus-1-5-turbo-dct-7-seater.jpg?q=80'],
+    images: ['/kia.jpg', '/kia1.jpg'],
     capacity: 8, // 7+1
     baggage: 4,
     type: 'SUV',
