@@ -15,18 +15,17 @@ import {
 import { Button } from '@/components/ui/button';
 import { Languages, Moon, Settings, Sun } from 'lucide-react';
 import { useLocale } from 'next-intl';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { useTheme } from 'next-themes';
 
 export function SettingsMenu() {
-  const router = useRouter();
   const pathname = usePathname();
   const locale = useLocale();
   const { setTheme } = useTheme();
 
   const switchLocale = (nextLocale: string) => {
     const newPath = pathname.replace(`/${locale}`, `/${nextLocale}`);
-    router.replace(newPath);
+    window.location.assign(newPath);
   };
   
   const localeNames: Record<string, string> = {
@@ -54,10 +53,6 @@ export function SettingsMenu() {
         <DropdownMenuItem onClick={() => setTheme('dark')}>
           <Moon className="mr-2 h-4 w-4" />
           <span>Dark</span>
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme('system')}>
-          <Settings className="mr-2 h-4 w-4" />
-          <span>System</span>
         </DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuLabel>Language</DropdownMenuLabel>

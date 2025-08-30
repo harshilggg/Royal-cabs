@@ -35,13 +35,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  params
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: string };
 }>) {
 
-  const { locale } = use(params);
+  const locale = use(getLocale());
   const messages = use(getMessages());
   
   const jsonLd = {
@@ -80,7 +78,6 @@ export default function RootLayout({
           <ThemeProvider
             attribute="class"
             defaultTheme="light"
-            enableSystem
             disableTransitionOnChange
           >
             <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:px-4 focus:py-2 focus:bg-background focus:text-foreground">
@@ -101,4 +98,3 @@ export default function RootLayout({
     </html>
   );
 }
-
