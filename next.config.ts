@@ -39,6 +39,12 @@ const nextConfig: NextConfig = {
         hostname: '5.imimg.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.cloudworkstations.dev',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
