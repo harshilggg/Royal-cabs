@@ -3,15 +3,14 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Car, Menu, Phone } from 'lucide-react';
+import { Menu, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 import * as React from 'react';
 import Image from 'next/image';
-import { ThemeToggle } from '@/components/ThemeToggle';
 import { useTranslations } from 'next-intl';
-import { LanguageSwitcher } from '../LanguageSwitcher';
+import { SettingsMenu } from '../SettingsMenu';
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -57,8 +56,7 @@ export function SiteHeader() {
                 {item.title}
               </Link>
             ))}
-            <LanguageSwitcher />
-            <ThemeToggle />
+            <SettingsMenu />
             <Button asChild className="transition-transform hover:scale-105">
                 <a href="https://wa.me/917999114272?text=Hi!%20I'd%20like%20to%20book%20a%20cab." target="_blank" rel="noopener noreferrer">
                     <Phone className="mr-2 h-4 w-4" /> {t('bookNow')}
@@ -96,9 +94,8 @@ export function SiteHeader() {
                   ))}
                 </div>
                 <div className="mt-auto border-t pt-4 space-y-4">
-                    <div className="flex justify-between">
-                      <LanguageSwitcher />
-                      <ThemeToggle />
+                    <div className="flex justify-end">
+                      <SettingsMenu />
                     </div>
                     <Button asChild size="lg" className="w-full">
                         <a href="https://wa.me/917999114272?text=Hi!%20I'd%20like%20to%20book%20a%20cab." target="_blank" rel="noopener noreferrer">
