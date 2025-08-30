@@ -9,7 +9,7 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center space-x-2 mb-4">
-              <Image src="https://imgd.aeplcdn.com/0x0/n/cw/ec/1/versions/royalcabs-logo.png" alt="Royal Cabs Logo" width={40} height={40} className="rounded-full" />
+              <Image src="/icon.jpg" alt="Royal Cabs Logo" width={40} height={40} className="rounded-full" />
               <span className="font-bold text-xl font-headline">Royal Cabs</span>
             </Link>
             <p className="text-muted-foreground text-sm">
