@@ -2,10 +2,10 @@ export interface Car {
   id: string;
   name: string;
   slug: string;
-  image: string;
+  images: string[];
   capacity: number;
   baggage: number;
-  type: 'Sedan' | 'SUV' | 'Van' | 'Hatchback';
+  type: 'Sedan' | 'SUV' | 'Van' | 'Hatchback' | 'Bus';
   description: string;
   features: string[];
 }

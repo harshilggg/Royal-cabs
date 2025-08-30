@@ -29,7 +29,7 @@ export function CarCard({ car }: CarCardProps) {
       <CardHeader className="p-0">
         <div className="relative w-full h-56 overflow-hidden">
           <Image
-            src={car.image}
+            src={car.images[0]}
             alt={car.name}
             data-ai-hint="car exterior"
             fill
@@ -66,4 +66,3 @@ export function CarCard({ car }: CarCardProps) {
     </Card>
   );
 }
-

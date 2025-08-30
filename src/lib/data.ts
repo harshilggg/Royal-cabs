@@ -5,7 +5,7 @@ export const cars: Car[] = [
     id: '1',
     name: 'Maruti Suzuki Dzire',
     slug: 'maruti-suzuki-dzire',
-    image: 'https://imgd.aeplcdn.com/1280x720/n/cw/ec/45691/dzire-exterior-right-front-three-quarter.jpeg?q=80',
+    images: ['https://imgd.aeplcdn.com/1280x720/n/cw/ec/45691/dzire-exterior-right-front-three-quarter.jpeg?q=80'],
     capacity: 5, // 4+1
     baggage: 2,
     type: 'Sedan',
@@ -16,7 +16,7 @@ export const cars: Car[] = [
     id: '2',
     name: 'Kia Carens',
     slug: 'kia-carens',
-    image: 'https://imgd.aeplcdn.com/1280x720/n/cw/ec/1/versions/kia-carens-prestige-plus-1-5-turbo-dct-7-seater.jpg?q=80',
+    images: ['https://imgd.aeplcdn.com/1280x720/n/cw/ec/1/versions/kia-carens-prestige-plus-1-5-turbo-dct-7-seater.jpg?q=80'],
     capacity: 8, // 7+1
     baggage: 4,
     type: 'SUV',
@@ -27,7 +27,7 @@ export const cars: Car[] = [
     id: '3',
     name: 'Toyota Innova Crysta',
     slug: 'toyota-innova-crysta',
-    image: 'https://imgd.aeplcdn.com/1280x720/n/cw/ec/140809/innova-crysta-exterior-right-front-three-quarter.jpeg?isig=0',
+    images: ['https://imgd.aeplcdn.com/1280x720/n/cw/ec/140809/innova-crysta-exterior-right-front-three-quarter.jpeg?isig=0'],
     capacity: 8, // 7+1
     baggage: 5,
     type: 'SUV',
@@ -38,7 +38,7 @@ export const cars: Car[] = [
     id: '4',
     name: 'Tempo Traveller',
     slug: 'tempo-traveller',
-    image: 'https://imgd.aeplcdn.com/1280x720/n/cw/ec/49385/force-traveller-3700-exterior-2.jpeg?q=80',
+    images: ['https://imgd.aeplcdn.com/1280x720/n/cw/ec/49385/force-traveller-3700-exterior-2.jpeg?q=80'],
     capacity: 13, // 12+1
     baggage: 10,
     type: 'Van',
@@ -49,7 +49,7 @@ export const cars: Car[] = [
     id: '5',
     name: 'Force Urbania',
     slug: 'force-urbania',
-    image: '/urbania.jpg',
+    images: ['/urbania.jpg'],
     capacity: 18, // 17+1
     baggage: 15,
     type: 'Van',
@@ -60,7 +60,7 @@ export const cars: Car[] = [
     id: '6',
     name: 'Bus',
     slug: 'bus',
-    image: '/bus.png',
+    images: ['/bus.jpg', '/bus1.jpg'],
     capacity: 25, // 24+1
     baggage: 20,
     type: 'Bus',
