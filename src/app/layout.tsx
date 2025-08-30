@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils';
 import { SiteHeader } from '@/components/layout/SiteHeader';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { Toaster } from '@/components/ui/toaster';
+import { FloatingWhatsApp } from '@/components/FloatingWhatsApp';
 
 const fontPoppins = Poppins({
   subsets: ['latin'],
@@ -67,6 +68,7 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <SiteFooter />
         </div>
+        <FloatingWhatsApp />
         <Toaster />
       </body>
     </html>
