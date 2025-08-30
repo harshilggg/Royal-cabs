@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import { Poppins, PT_Sans } from 'next/font/google';
 import './globals.css';
@@ -8,6 +9,8 @@ import { Toaster } from '@/components/ui/toaster';
 import { FloatingWhatsApp } from '@/components/FloatingWhatsApp';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import { BubbleBackground } from '@/components/BubbleBackground';
+import { NextIntlClientProvider } from 'next-intl';
+import { getLocale, getMessages } from 'next-intl/server';
 
 const fontPoppins = Poppins({
   subsets: ['latin'],
@@ -28,7 +31,7 @@ export const metadata: Metadata = {
   keywords: 'taxi service, cab service, madhya pradesh, jabalpur, indore, bhopal, ujjain, airport transfer, outstation cabs',
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -50,8 +53,11 @@ export default function RootLayout({
     url: 'https://royalcabs.example.com',
   };
 
+  const locale = await getLocale();
+  const messages = await getMessages();
+
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <head>
         <script
             type="application/ld+json"
@@ -65,21 +71,23 @@ export default function RootLayout({
           fontPTSans.variable
         )}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <BubbleBackground />
-          <div className="relative flex min-h-dvh flex-col bg-transparent">
-            <SiteHeader />
-            <main className="flex-1">{children}</main>
-            <SiteFooter />
-          </div>
-          <FloatingWhatsApp />
-          <Toaster />
-        </ThemeProvider>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="light"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <BubbleBackground />
+            <div className="relative flex min-h-dvh flex-col bg-transparent">
+              <SiteHeader />
+              <main className="flex-1">{children}</main>
+              <SiteFooter />
+            </div>
+            <FloatingWhatsApp />
+            <Toaster />
+          </ThemeProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

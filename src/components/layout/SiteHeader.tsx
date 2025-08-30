@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -9,17 +10,20 @@ import { cn } from '@/lib/utils';
 import * as React from 'react';
 import Image from 'next/image';
 import { ThemeToggle } from '@/components/ThemeToggle';
-
-const mainNav = [
-  { title: 'Home', href: '/' },
-  { title: 'Our Cars', href: '/cars' },
-  { title: 'Contact Us', href: '/contact' },
-];
+import { useLocale, useMessages } from 'next-intl';
 
 export function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
+  const t = useMessages() as any;
+  const locale = useLocale();
+
+  const mainNav = [
+    { title: t.navigation.home, href: '/' },
+    { title: t.navigation.cars, href: '/cars' },
+    { title: t.navigation.contact, href: '/contact' },
+  ];
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -37,7 +41,7 @@ export function SiteHeader() {
       <div className="container flex h-20 max-w-7xl items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
           <Image src="/icons/royal.png" alt="Royal Cabs Logo" width={50} height={50} className="rounded-full" />
-          <span className="font-bold inline-block font-headline text-lg">Royal Cabs</span>
+          <span className="font-bold inline-block font-headline text-lg">{t.navigation.brand}</span>
         </Link>
         <div className="flex flex-1 items-center justify-end space-x-2">
           <nav className="hidden md:flex gap-6 items-center">
@@ -45,6 +49,7 @@ export function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
+                locale={locale === 'hi' ? 'hi' : 'en'}
                 className={cn(
                   'text-sm font-medium transition-colors hover:text-primary relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-primary after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100',
                   pathname === item.href ? 'text-primary' : 'text-muted-foreground'
@@ -56,7 +61,7 @@ export function SiteHeader() {
             <ThemeToggle />
             <Button asChild className="transition-transform hover:scale-105">
                 <a href="https://wa.me/917999114272?text=Hi!%20I'd%20like%20to%20book%20a%20cab." target="_blank" rel="noopener noreferrer">
-                    <Phone className="mr-2 h-4 w-4" /> Book Now
+                    <Phone className="mr-2 h-4 w-4" /> {t.navigation.bookNow}
                 </a>
             </Button>
           </nav>
@@ -72,7 +77,7 @@ export function SiteHeader() {
                 <div className="flex items-center border-b pb-4">
                   <Link href="/" className="flex items-center space-x-2" onClick={() => setOpen(false)}>
                     <Image src="/icons/royal.png" alt="Royal Cabs Logo" width={40} height={40} className="rounded-full" />
-                    <span className="font-bold font-headline text-lg">Royal Cabs</span>
+                    <span className="font-bold font-headline text-lg">{t.navigation.brand}</span>
                   </Link>
                 </div>
                 <div className="flex flex-col gap-4 py-4">
@@ -80,6 +85,7 @@ export function SiteHeader() {
                     <Link
                       key={item.href}
                       href={item.href}
+                      locale={locale === 'hi' ? 'hi' : 'en'}
                       onClick={() => setOpen(false)}
                       className={cn(
                         'text-lg font-medium transition-colors hover:text-primary',
@@ -94,7 +100,7 @@ export function SiteHeader() {
                     <ThemeToggle />
                     <Button asChild size="lg" className="w-full">
                         <a href="https://wa.me/917999114272?text=Hi!%20I'd%20like%20to%20book%20a%20cab." target="_blank" rel="noopener noreferrer">
-                            <Phone className="mr-2 h-4 w-4" /> Book on WhatsApp
+                            <Phone className="mr-2 h-4 w-4" /> {t.navigation.bookOnWhatsApp}
                         </a>
                     </Button>
                 </div>

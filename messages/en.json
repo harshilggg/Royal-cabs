@@ -1,0 +1,25 @@
+
+{
+  "navigation": {
+    "brand": "Royal Cabs",
+    "home": "Home",
+    "cars": "Our Cars",
+    "contact": "Contact Us",
+    "bookNow": "Book Now",
+    "bookOnWhatsApp": "Book on WhatsApp"
+  },
+  "footer": {
+    "tagline": "Your trusted partner for premium cab services in Madhya Pradesh and beyond. Owned and operated by Manoj Kumar Gupta.",
+    "quickLinks": "Quick Links",
+    "ourServices": "Our Services",
+    "services": {
+      "local": "Local Travel",
+      "outstation": "Outstation Trips",
+      "airport": "Airport Transfers",
+      "corporate": "Corporate Travel"
+    },
+    "getInTouch": "Get in Touch",
+    "address": "Near Ganga Nagar, Jabalpur, MP 482002",
+    "copyright": "All rights reserved."
+  }
+}
