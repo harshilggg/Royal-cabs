@@ -11,6 +11,7 @@ import * as React from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { SettingsMenu } from '../SettingsMenu';
+import { ScrollArea } from '../ui/scroll-area';
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -43,7 +44,7 @@ export function SiteHeader() {
           <span className="font-bold inline-block font-headline text-lg">{t('brand')}</span>
         </Link>
         <div className="flex flex-1 items-center justify-end space-x-2">
-          <nav className="hidden md:flex gap-6 items-center">
+          <nav className="hidden md:flex gap-6 items-center" aria-label="Main Navigation">
             {mainNav.map((item) => (
               <Link
                 key={item.href}
@@ -78,27 +79,29 @@ export function SiteHeader() {
                     <span className="font-bold font-headline text-lg">{t('brand')}</span>
                   </Link>
                 </div>
-                <div className="flex flex-col gap-4 py-4">
-                  {mainNav.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      onClick={() => setOpen(false)}
-                      className={cn(
-                        'text-lg font-medium transition-colors hover:text-primary',
-                        pathname.endsWith(item.href) ? 'text-primary' : 'text-foreground'
-                      )}
-                    >
-                      {item.title}
-                    </Link>
-                  ))}
-                </div>
+                <ScrollArea className="flex-grow">
+                    <nav className="flex flex-col gap-4 py-4" aria-label="Mobile Navigation">
+                      {mainNav.map((item) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          onClick={() => setOpen(false)}
+                          className={cn(
+                            'text-lg font-medium transition-colors hover:text-primary',
+                            pathname.endsWith(item.href) ? 'text-primary' : 'text-foreground'
+                          )}
+                        >
+                          {item.title}
+                        </Link>
+                      ))}
+                    </nav>
+                </ScrollArea>
                 <div className="mt-auto border-t pt-4 space-y-4">
                     <div className="flex justify-end">
                       <SettingsMenu />
                     </div>
                     <Button asChild size="lg" className="w-full">
-                        <a href="https://wa.me/917999114272?text=Hi!%20I'd%20like%20to%20book%20a%20cab." target="_blank" rel="noopener noreferrer">
+                        <a href="https://wa.me/917999114272?text=Hi!%20I'd%20like%20to%20book%20a%20cab." target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>
                             <Phone className="mr-2 h-4 w-4" /> {t('bookOnWhatsApp')}
                         </a>
                     </Button>

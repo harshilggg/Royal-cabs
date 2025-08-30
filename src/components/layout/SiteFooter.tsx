@@ -23,14 +23,14 @@ export function SiteFooter() {
             </p>
           </div>
           
-          <div>
+          <nav>
             <h3 className="font-semibold font-headline text-lg mb-4">{t('quickLinks')}</h3>
             <ul className="space-y-2">
               <li><Link href="/" className="text-sm text-muted-foreground hover:text-primary">{tNav('home')}</Link></li>
               <li><Link href="/cars" className="text-sm text-muted-foreground hover:text-primary">{tNav('cars')}</Link></li>
               <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-primary">{tNav('contact')}</Link></li>
             </ul>
-          </div>
+          </nav>
 
           <div>
             <h3 className="font-semibold font-headline text-lg mb-4">{t('ourServices')}</h3>
@@ -68,5 +68,3 @@ export function SiteFooter() {
     </footer>
   );
 }
-
-

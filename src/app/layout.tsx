@@ -11,6 +11,7 @@ import { ThemeProvider } from '@/components/ThemeProvider';
 import { BubbleBackground } from '@/components/BubbleBackground';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
+import { use } from 'react';
 
 const fontPoppins = Poppins({
   subsets: ['latin'],
@@ -31,13 +32,17 @@ export const metadata: Metadata = {
   keywords: 'taxi service, cab service, madhya pradesh, jabalpur, indore, bhopal, ujjain, airport transfer, outstation cabs',
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
-  params: {locale}
+  params
 }: Readonly<{
   children: React.ReactNode;
   params: { locale: string };
 }>) {
+
+  const { locale } = use(params);
+  const messages = use(getMessages());
+  
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
@@ -54,8 +59,6 @@ export default async function RootLayout({
     },
     url: 'https://royalcabs.example.com',
   };
-
-  const messages = await getMessages();
 
   return (
     <html lang={locale} suppressHydrationWarning>
@@ -79,10 +82,13 @@ export default async function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
+            <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:px-4 focus:py-2 focus:bg-background focus:text-foreground">
+              Skip to main content
+            </a>
             <BubbleBackground />
             <div className="relative flex min-h-dvh flex-col bg-transparent">
               <SiteHeader />
-              <main className="flex-1">{children}</main>
+              <main id="main-content" className="flex-1">{children}</main>
               <SiteFooter />
             </div>
             <FloatingWhatsApp />
