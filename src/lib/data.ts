@@ -24,6 +24,7 @@ export const cars: Car[] = [
     type: 'SUV',
     description: 'The perfect MUV for family trips and outstation travel, seating 7 passengers plus a driver. Offers premium comfort and space.',
     features: ['Air Conditioning', 'Captain Seats', 'Premium Audio', 'Extra Baggage Space'],
+    tag: 'Family Favourite',
   },
   {
     id: '1',
@@ -35,6 +36,7 @@ export const cars: Car[] = [
     type: 'Sedan',
     description: 'A comfortable and economical choice for city travel and small families. Perfect for 4 passengers plus a driver.',
     features: ['Air Conditioning', 'Music System', 'Spacious Legroom'],
+    tag: 'Best Value',
   },
   {
     id: '2',
@@ -57,6 +59,7 @@ export const cars: Car[] = [
     type: 'Van',
     description: 'Ideal for large groups and family functions, accommodating 12 passengers plus a driver. Ensures a comfortable journey for everyone.',
     features: ['Air Conditioning', 'Ample Legroom', 'Pushback Seats', 'Music System'],
+    tag: 'Group Trips',
   },
   {
     id: '5',
