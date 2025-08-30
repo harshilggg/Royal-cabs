@@ -224,7 +224,7 @@ export default function Home() {
             <Accordion type="single" collapsible className="w-full">
               {faqs.map((faq, index) => (
                 <AccordionItem key={index} value={`item-${index + 1}`}>
-                  <AccordionTrigger className="text-lg text-left">{faq.question}</AccordionTrigger>
+                  <AccordionTrigger className="text-lg text-left">{`${index + 1}. ${faq.question}`}</AccordionTrigger>
                   <AccordionContent className="text-base text-muted-foreground">{faq.answer}</AccordionContent>
                 </AccordionItem>
               ))}
