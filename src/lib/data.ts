@@ -1,4 +1,3 @@
-
 import type { Car, Testimonial, FAQ } from '@/lib/types';
 
 export const cars: Car[] = [
@@ -13,18 +12,6 @@ export const cars: Car[] = [
     description: 'A highly popular and reliable choice for outstation travel, offering premium comfort and space for 7 passengers plus a driver.',
     features: ['Air Conditioning', 'Premium Audio', 'Extra Baggage Space'],
     tag: 'Most Popular',
-  },
-  {
-    id: '3',
-    name: 'Toyota Innova Crysta',
-    slug: 'toyota-innova-crysta',
-    images: ['/cryta.jpg'],
-    capacity: '7+1',
-    baggage: 5,
-    type: 'SUV',
-    description: 'The perfect MUV for family trips and outstation travel, seating 7 passengers plus a driver. Offers premium comfort and space.',
-    features: ['Air Conditioning', 'Captain Seats', 'Premium Audio', 'Extra Baggage Space'],
-    tag: 'Family Favourite',
   },
   {
     id: '1',
@@ -63,6 +50,18 @@ export const cars: Car[] = [
     tag: 'Group Trips',
   },
   {
+    id: '3',
+    name: 'Toyota Innova Crysta',
+    slug: 'toyota-innova-crysta',
+    images: ['/cryta.jpg'],
+    capacity: '7+1',
+    baggage: 5,
+    type: 'SUV',
+    description: 'The perfect MUV for family trips and outstation travel, seating 7 passengers plus a driver. Offers premium comfort and space.',
+    features: ['Air Conditioning', 'Captain Seats', 'Premium Audio', 'Extra Baggage Space'],
+    tag: 'Family Favourite',
+  },
+  {
     id: '5',
     name: 'Force Urbania',
     slug: 'force-urbania',
@@ -88,7 +87,7 @@ export const cars: Car[] = [
   },
 ];
 
-export const featuredCars = cars.slice(0, 3);
+export const featuredCars = cars.slice(0, 4);
 
 export const testimonials: Testimonial[] = [
   {
