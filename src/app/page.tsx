@@ -181,7 +181,7 @@ export default function Home() {
       {/* FAQ Section */}
       <AnimateOnScroll>
         <section className="py-16 md:py-24">
-          <div className="container mx-auto px-4 max-w-3xl">
+          <div className="container mx-auto px-4 max-w-3xl bg-background rounded-lg shadow-lg p-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-primary">Frequently Asked Questions</h2>
               <p className="mt-2 text-lg text-muted-foreground">
