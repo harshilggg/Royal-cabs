@@ -71,54 +71,30 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-headline;
   }
-  section {
-    @apply transition-opacity duration-1000 ease-out;
-  }
-  .animate-on-scroll {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  }
-  .animate-on-scroll.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 @layer components {
-  .floating-wpp {
-    @apply fixed bottom-6 right-6 z-50;
+  /* Bubble background animation */
+  .bubble-background {
+    @apply fixed top-0 left-0 w-full h-full -z-10 overflow-hidden;
   }
-  .floating-wpp .whatsapp-button {
-    @apply w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-110;
-    animation: bounce 2s infinite;
-  }
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-15px);
-  }
-  60% {
-    transform: translateY(-8px);
+  .bubble {
+    @apply absolute block rounded-full;
+    animation: float 25s infinite linear;
+    bottom: -150px;
+    background-color: var(--color);
+    left: var(--x);
+    width: var(--size);
+    height: var(--size);
+    animation-delay: var(--delay);
   }
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes fadeInUp {
+@keyframes float {
   from {
-    opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(0) rotate(0);
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
+    transform: translateY(-120vh) rotate(720deg);
   }
 }
