@@ -80,21 +80,27 @@
   }
   .bubble {
     @apply absolute block rounded-full;
-    animation: float 25s infinite linear;
-    bottom: -150px;
-    background-color: var(--color);
+    top: var(--y);
     left: var(--x);
     width: var(--size);
     height: var(--size);
+    background-color: var(--color);
+    animation: pulse 5s infinite alternate;
     animation-delay: var(--delay);
+    transition: transform 0.3s ease-in-out;
+  }
+  .bubble:hover {
+    transform: scale(1.5);
   }
 }
 
-@keyframes float {
+@keyframes pulse {
   from {
-    transform: translateY(0) rotate(0);
+    transform: scale(1);
+    opacity: 0.5;
   }
   to {
-    transform: translateY(-120vh) rotate(720deg);
+    transform: scale(1.1);
+    opacity: 0.8;
   }
 }
