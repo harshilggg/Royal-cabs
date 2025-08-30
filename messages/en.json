@@ -107,5 +107,38 @@
   },
   "general": {
     "arrowRight": "Arrow Right"
+  },
+  "terms": {
+    "title": "Terms and Conditions",
+    "subtitle": "Last updated: October 26, 2023",
+    "introduction": "Please read these terms and conditions carefully before using Our Service. By booking a ride with Royal Cabs, you agree to be bound by these terms.",
+    "bookings": {
+      "title": "Bookings and Confirmation",
+      "p1": "All bookings are subject to vehicle availability. We will confirm your booking via phone call or WhatsApp. It is the customer's responsibility to provide accurate information at the time of booking.",
+      "p2": "For outstation trips, a booking is considered confirmed only after an advance payment has been made, if requested."
+    },
+    "pricing": {
+      "title": "Pricing and Payments",
+      "p1": "Fares for outstation trips are calculated on a per-kilometer basis, with a minimum daily running average (typically 250-300 km, subject to the route).",
+      "p2": "All tolls, parking charges, state taxes, and other incidental fees are to be borne by the customer and are payable at the end of the trip unless included in a package."
+    },
+    "cancellations": {
+      "title": "Cancellations and Refunds",
+      "p1": "Cancellation policies vary based on the type of booking (local, outstation, etc.). Please confirm the cancellation policy at the time of booking. Any refunds will be processed within 7-10 business days."
+    },
+    "responsibilities": {
+      "title": "Customer and Driver Responsibilities",
+      "p1": "Customers are expected to treat the driver and vehicle with respect. Any damage caused to the vehicle by the customer will be charged accordingly. Smoking and consumption of alcohol are strictly prohibited inside the vehicle.",
+      "p2": "Our drivers will adhere to the agreed-upon itinerary and timelines. They are instructed to prioritize passenger safety and follow all traffic regulations."
+    },
+    "liability": {
+      "title": "Liability",
+      "p1": "Royal Cabs is not responsible for any loss or damage of personal belongings left in the vehicle. While we ensure our vehicles are well-maintained, we are not liable for delays caused by unforeseen circumstances like traffic, weather, or road closures."
+    },
+    "governingLaw": {
+      "title": "Governing Law",
+      "p1": "All disputes shall be subject to the exclusive jurisdiction of the courts in Jabalpur, Madhya Pradesh."
+    },
+    "contact": "If you have any questions about these Terms, you can contact us at royalcabs31@gmail.com."
   }
 }

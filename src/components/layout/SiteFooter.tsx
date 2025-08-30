@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import { TermsDialog } from '../TermsDialog';
 
 export function SiteFooter() {
   const t = useTranslations('footer');
@@ -62,7 +63,11 @@ export function SiteFooter() {
         </div>
         
         <div className="mt-8 border-t pt-6 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} {tNav('brand')}. {t('copyright')}</p>
+           <TermsDialog>
+             <p className="cursor-pointer hover:text-primary transition-colors">
+                &copy; {new Date().getFullYear()} {tNav('brand')}. {t('copyright')}
+             </p>
+           </TermsDialog>
         </div>
       </div>
     </footer>
