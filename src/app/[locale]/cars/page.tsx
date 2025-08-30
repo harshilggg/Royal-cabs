@@ -2,12 +2,8 @@
 'use client';
 import { CarCard } from '@/components/CarCard';
 import { cars } from '@/lib/data';
-import type { Metadata } from 'next';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-
-// Since this is a client component, we can't export metadata directly.
-// This should be handled in the nearest server component parent, which is the layout.
-// We will add logic in the layout to set metadata dynamically based on the page.
 
 export default function CarsPage() {
   const t = useTranslations('carsPage');
@@ -15,6 +11,13 @@ export default function CarsPage() {
   return (
     <div className="container mx-auto px-4 py-12 md:py-20">
       <div className="text-center mb-12">
+        <Image 
+            src="/icons/royal.png" 
+            alt="Royal Cabs Logo" 
+            width={100} 
+            height={100} 
+            className="mx-auto mb-6 rounded-lg"
+        />
         <h1 className="text-4xl md:text-5xl font-bold text-primary">{t('title')}</h1>
         <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
           {t('subtitle')}
