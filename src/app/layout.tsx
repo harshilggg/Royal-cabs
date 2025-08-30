@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
   children,
-  params
+  params: {locale}
 }: Readonly<{
   children: React.ReactNode;
   params: { locale: string };
@@ -55,7 +55,6 @@ export default async function RootLayout({
     url: 'https://royalcabs.example.com',
   };
 
-  const locale = await getLocale();
   const messages = await getMessages();
 
   return (
@@ -94,4 +93,3 @@ export default async function RootLayout({
     </html>
   );
 }
-
