@@ -49,7 +49,7 @@ export const cars: Car[] = [
     id: '5',
     name: 'Force Urbania',
     slug: 'force-urbania',
-    image: 'https://imgd.aeplcdn.com/1280x720/n/cw/ec/139785/urbania-exterior-right-front-three-quarter.jpeg?isig=0&q=80',
+    image: '/urbania.jpg',
     capacity: 18, // 17+1
     baggage: 15,
     type: 'Van',
@@ -60,7 +60,7 @@ export const cars: Car[] = [
     id: '6',
     name: 'Bus',
     slug: 'bus',
-    image: 'https://imgd.aeplcdn.com/1280x720/n/cw/ec/158721/tata-starbus-ev-4-12-low-entry-ac-bs-vi-exterior-0.jpeg?q=80',
+    image: '/bus.png',
     capacity: 25, // 24+1
     baggage: 20,
     type: 'Bus',
