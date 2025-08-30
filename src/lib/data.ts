@@ -25,7 +25,7 @@ export const cars: Car[] = [
     features: ['Air Conditioning', 'Music System', 'Spacious Legroom'],
     tag: 'Best Value',
   },
-  {
+   {
     id: '2',
     name: 'Kia Carens',
     slug: 'kia-carens',
@@ -91,28 +91,34 @@ export const featuredCars = cars.slice(0, 4);
 
 export const testimonials: Testimonial[] = [
   {
-    name: 'Anjali Sharma',
-    location: 'Bhopal',
-    comment: 'Royal Cabs made our family trip to Ujjain from Jabalpur so comfortable. The Innova was spacious and clean, and the driver was very professional. Highly recommended!',
+    name: 'Monika Gupta',
+    location: 'Jabalpur',
+    comment: 'The service is pretty good and the owner is so helpful and also co-operate with all your issues and most of the drivers are also polite while talking.',
     avatar: 'https://i.pravatar.cc/150?img=1',
   },
   {
-    name: 'Rajesh Kumar',
-    location: 'Indore',
-    comment: 'I use Royal Cabs for all my business trips in and around Jabalpur. They are always on time, the cars are impeccable, and the booking process is seamless.',
+    name: 'Satyam Agarwal',
+    location: 'Jabalpur',
+    comment: 'Awesome and on-time service. Mr. Manoj provided me with a car within 30 mins on an urgent basis. The driver was very polite and professional. The car was new.',
     avatar: 'https://i.pravatar.cc/150?img=3',
   },
   {
-    name: 'Priya Verma',
-    location: 'Sagar',
-    comment: 'We booked a Tempo Traveller for a weekend getaway. The vehicle was in great condition and our driver, Suresh, was fantastic. Great experience overall.',
+    name: 'Mohammad Shabrez Khan',
+    location: 'Jabalpur',
+    comment: 'Best service in Jabalpur. Driver and taxis are also good & clean.',
     avatar: 'https://i.pravatar.cc/150?img=5',
   },
   {
-    name: 'Vikram Singh',
+    name: 'Mukesh Shrivas',
     location: 'Jabalpur',
-    comment: 'Used their airport transfer service from my home in Jabalpur. The cab arrived before time and the ride was smooth. Much better than regular airport taxis. Will use again.',
-    avatar: 'https://i.prav-atar.cc/150?img=7',
+    comment: 'Good services and affordable price. Taxis are also good & clean.',
+    avatar: 'https://i.pravatar.cc/150?img=7',
+  },
+  {
+    name: 'Devansh',
+    location: 'Jabalpur',
+    comment: 'Really good experience, even the drivers are very cooperative.',
+    avatar: 'https://i.pravatar.cc/150?img=9',
   },
 ];
 
