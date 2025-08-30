@@ -42,7 +42,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: '**.cloudworkstations.dev',
+        hostname: '*.cloudworkstations.dev',
         port: '',
         pathname: '/**',
       }
