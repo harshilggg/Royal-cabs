@@ -48,6 +48,7 @@ export const cars: Car[] = [
     type: 'SUV',
     description: 'A stylish and modern SUV with flexible seating for 7 passengers plus a driver, perfect for families who need extra space and comfort.',
     features: ['Air Conditioning', 'Premium Audio', 'Sunroof', 'Spacious Interior'],
+    tag: 'In Demand',
   },
   {
     id: '4',
@@ -71,6 +72,7 @@ export const cars: Car[] = [
     type: 'Van',
     description: 'A premium and spacious van for larger groups of 17 plus a driver, seeking extra comfort and a touch of luxury on their travels.',
     features: ['Air Conditioning', 'Reclining Seats', 'LED Lights', 'Ample Space'],
+    tag: 'Luxury Group Travel',
   },
   {
     id: '6',
@@ -82,6 +84,7 @@ export const cars: Car[] = [
     type: 'Bus',
     description: 'For very large groups, corporate events, or wedding parties. This 24+1 seater bus provides maximum capacity without sacrificing comfort.',
     features: ['Air Conditioning', 'Spacious Seating', 'Luggage Carrier', 'Sound System'],
+    tag: 'Large Groups',
   },
 ];
 
