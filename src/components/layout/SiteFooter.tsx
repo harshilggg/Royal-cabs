@@ -47,7 +47,7 @@ export function SiteFooter() {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="h-4 w-4 mt-1 mr-3 text-muted-foreground flex-shrink-0" />
-                <span className="text-sm text-muted-foreground">{t('address')}</span>
+                <a href="https://maps.app.goo.gl/vWEv6qXg9w1AFWLPA?g_st=aw" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary">{t('address')}</a>
               </li>
               <li className="flex items-center">
                 <Phone className="h-4 w-4 mr-3 text-muted-foreground flex-shrink-0" />
@@ -68,4 +68,5 @@ export function SiteFooter() {
     </footer>
   );
 }
+
 

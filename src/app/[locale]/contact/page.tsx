@@ -49,7 +49,7 @@ export default function ContactPage() {
                   </li>
                    <li className="flex items-start">
                     <MapPin className="h-5 w-5 mt-1 mr-3 text-primary flex-shrink-0" />
-                    <span className="text-foreground">Near Ganga Nagar, Jabalpur, MP 482002</span>
+                    <a href="https://maps.app.goo.gl/vWEv6qXg9w1AFWLPA?g_st=aw" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary">Shop No.9, Arjun complex, Napier Town, Jabalpur, Madhya Pradesh 482002</a>
                   </li>
                 </ul>
               </div>
@@ -67,4 +67,5 @@ export default function ContactPage() {
     </div>
   );
 }
+
 
