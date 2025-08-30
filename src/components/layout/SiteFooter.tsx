@@ -65,7 +65,7 @@ export function SiteFooter() {
         <div className="mt-8 border-t pt-6 text-center text-sm text-muted-foreground">
            <TermsDialog>
              <p className="cursor-pointer hover:text-primary transition-colors">
-                &copy; {new Date().getFullYear()} {tNav('brand')}. {t('copyright')}
+                {tNav('brand')}. Terms & Conditions
              </p>
            </TermsDialog>
         </div>
