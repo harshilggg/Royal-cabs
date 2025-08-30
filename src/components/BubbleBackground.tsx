@@ -15,7 +15,7 @@ const generateBubbles = (count: number): Bubble[] => {
       '--color': `hsl(var(--${['primary', 'secondary', 'accent'][Math.floor(Math.random() * 3)]}) / ${Math.random() * 0.2 + 0.1})`,
       '--x': `${Math.random() * 100}%`,
       '--y': `${Math.random() * 100}%`,
-      '--delay': `${Math.random() * 5}s`,
+      '--delay': `${Math.random() * 25}s`, // Increased delay for more variation
     } as React.CSSProperties,
   }));
 };
@@ -25,7 +25,7 @@ export function BubbleBackground() {
 
   useEffect(() => {
     // Generate bubbles only on the client-side after initial render
-    setBubbles(generateBubbles(30));
+    setBubbles(generateBubbles(15));
   }, []);
 
   return (
