@@ -1,6 +1,7 @@
 import { ContactForm } from '@/components/ContactForm';
 import { Mail, MapPin, Phone } from 'lucide-react';
 import type { Metadata } from 'next';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Contact Us - Royal Cabs',
@@ -13,6 +14,13 @@ export default function ContactPage() {
       <div className="container mx-auto px-4 py-16 md:py-24">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
+            <Image 
+              src="/icons/royal.png" 
+              alt="Royal Cabs Logo" 
+              width={100} 
+              height={100} 
+              className="mx-auto mb-6 rounded-lg"
+            />
             <h1 className="text-4xl md:text-5xl font-bold text-primary">Ask Your Queries</h1>
             <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
               We're here to help you with all your travel needs. Fill out the form below, and we'll get back to you shortly.
