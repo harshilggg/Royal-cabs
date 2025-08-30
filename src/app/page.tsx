@@ -37,11 +37,11 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent" />
         <div className="relative z-10 max-w-4xl px-4 flex flex-col items-center">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white drop-shadow-lg font-headline animate-fadeInUp" style={{animationDelay: '0.2s', animationFillMode: 'backwards'}}>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white drop-shadow-lg font-headline animate-fadeInUp mt-16 md:mt-0" style={{animationDelay: '0.2s', animationFillMode: 'backwards'}}>
             Where Luxury Meets Budget
           </h1>
           <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto text-gray-200 drop-shadow-md animate-fadeInUp" style={{animationDelay: '0.4s', animationFillMode: 'backwards'}}>
-            Experience premium taxi services across Madhya Pradesh. Unmatched comfort, reliability, and style for over 23 years.
+            Experience premium taxi services across Madhya Pradesh & Beyond. Unmatched comfort, reliability, and style for over 23 years.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4 w-full max-w-md animate-fadeInUp" style={{animationDelay: '0.6s', animationFillMode: 'backwards'}}>
             <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg transition-transform hover:scale-105">
