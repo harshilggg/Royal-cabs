@@ -7,18 +7,19 @@ export const cars: Car[] = [
     name: 'Innova',
     slug: 'innova',
     images: ['/inova.jpg'],
-    capacity: 8, // 7+1
+    capacity: '7+1',
     baggage: 5,
     type: 'SUV',
     description: 'A highly popular and reliable choice for outstation travel, offering premium comfort and space for 7 passengers plus a driver.',
     features: ['Air Conditioning', 'Premium Audio', 'Extra Baggage Space'],
+    tag: 'Most Popular',
   },
   {
     id: '3',
     name: 'Toyota Innova Crysta',
     slug: 'toyota-innova-crysta',
     images: ['/cryta.jpg'],
-    capacity: 8, // 7+1
+    capacity: '7+1',
     baggage: 5,
     type: 'SUV',
     description: 'The perfect MUV for family trips and outstation travel, seating 7 passengers plus a driver. Offers premium comfort and space.',
@@ -29,7 +30,7 @@ export const cars: Car[] = [
     name: 'Maruti Suzuki Dzire',
     slug: 'maruti-suzuki-dzire',
     images: ['/dzire.jpg'],
-    capacity: 5, // 4+1
+    capacity: '4+1',
     baggage: 2,
     type: 'Sedan',
     description: 'A comfortable and economical choice for city travel and small families. Perfect for 4 passengers plus a driver.',
@@ -40,7 +41,7 @@ export const cars: Car[] = [
     name: 'Kia Carens',
     slug: 'kia-carens',
     images: ['/kia.jpg', '/kia1.jpg'],
-    capacity: 8, // 7+1
+    capacity: '7+1',
     baggage: 4,
     type: 'SUV',
     description: 'A stylish and modern SUV with flexible seating for 7 passengers plus a driver, perfect for families who need extra space and comfort.',
@@ -51,7 +52,7 @@ export const cars: Car[] = [
     name: 'Tempo / Traveller',
     slug: 'tempo-traveller',
     images: ['/tourist.jpg'],
-    capacity: 13, // 12+1
+    capacity: '12+1',
     baggage: 10,
     type: 'Van',
     description: 'Ideal for large groups and family functions, accommodating 12 passengers plus a driver. Ensures a comfortable journey for everyone.',
@@ -62,7 +63,7 @@ export const cars: Car[] = [
     name: 'Force Urbania',
     slug: 'force-urbania',
     images: ['/urbania.jpg'],
-    capacity: 18, // 17+1
+    capacity: '17+1',
     baggage: 15,
     type: 'Van',
     description: 'A premium and spacious van for larger groups of 17 plus a driver, seeking extra comfort and a touch of luxury on their travels.',
@@ -73,7 +74,7 @@ export const cars: Car[] = [
     name: 'Bus',
     slug: 'bus',
     images: ['/bus.jpg', '/bus1.jpg'],
-    capacity: 25, // 24+1
+    capacity: '24+1',
     baggage: 20,
     type: 'Bus',
     description: 'For very large groups, corporate events, or wedding parties. This 24+1 seater bus provides maximum capacity without sacrificing comfort.',

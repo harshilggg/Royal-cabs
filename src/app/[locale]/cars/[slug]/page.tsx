@@ -31,29 +31,29 @@ export default function CarDetailPage({ params }: { params: { slug: string } }) 
       <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
         {/* Car Image and Basic Info */}
         <div>
-           {car.images.length > 1 ? (
-              <Carousel 
-                className="w-full rounded-lg overflow-hidden shadow-lg mb-6"
-                plugins={[Autoplay({ delay: 3000, stopOnInteraction: true })]}
-                opts={{ loop: true }}
-              >
-                <CarouselContent>
-                  {car.images.map((img, index) => (
-                    <CarouselItem key={index}>
-                      <div className="relative w-full h-80 md:h-96">
-                        <Image src={img} alt={`${car.name} image ${index + 1}`} data-ai-hint="car side view" fill className="object-cover" />
-                      </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2" />
-                <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2" />
-              </Carousel>
-            ) : (
-              <div className="relative w-full h-80 md:h-96 rounded-lg overflow-hidden shadow-lg mb-6">
-                <Image src={car.images[0]} alt={car.name} data-ai-hint="car side view" fill className="object-cover" />
-              </div>
-            )}
+          <div className="relative">
+            <Carousel 
+              className="w-full rounded-lg overflow-hidden shadow-lg mb-6"
+              plugins={[Autoplay({ delay: 3000, stopOnInteraction: true })]}
+              opts={{ loop: true }}
+            >
+              <CarouselContent>
+                {car.images.map((img, index) => (
+                  <CarouselItem key={index}>
+                    <div className="relative w-full h-80 md:h-96">
+                      <Image src={img} alt={`${car.name} image ${index + 1}`} data-ai-hint="car side view" fill className="object-cover" />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              {car.images.length > 1 && (
+                <>
+                  <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-10" />
+                  <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-10" />
+                </>
+              )}
+            </Carousel>
+          </div>
           <div className="flex justify-between items-center mb-2">
             <h1 className="text-3xl md:text-4xl font-bold text-primary">{car.name}</h1>
             <Badge variant="secondary" className="text-lg">{car.type}</Badge>

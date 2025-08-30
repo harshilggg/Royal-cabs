@@ -3,11 +3,12 @@ export interface Car {
   name: string;
   slug: string;
   images: string[];
-  capacity: number;
+  capacity: string;
   baggage: number;
   type: 'Sedan' | 'SUV' | 'Van' | 'Hatchback' | 'Bus';
   description: string;
   features: string[];
+  tag?: string;
 }
 
 export interface Testimonial {

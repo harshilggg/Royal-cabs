@@ -34,6 +34,9 @@ export function CarCard({ car }: CarCardProps) {
             fill
             className="object-cover group-hover:scale-105 transition-transform duration-500"
           />
+          {car.tag && (
+            <Badge className="absolute top-2 right-2" variant="destructive">{car.tag}</Badge>
+          )}
         </div>
         <div className="p-6 pb-2">
             <div className="flex justify-between items-start">
