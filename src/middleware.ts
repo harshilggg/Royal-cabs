@@ -2,7 +2,7 @@
 import createMiddleware from 'next-intl/middleware';
  
 export default createMiddleware({
-  locales: ['en', 'hi'],
+  locales: ['en', 'hi', 'mr', 'gu', 'rj'],
   defaultLocale: 'en'
 });
  
@@ -11,4 +11,3 @@ export const config = {
   // folders "api", "images" and "_next" (that internal to Next.js).
   matcher: ['/((?!api|images|_next|icons|.*\\..*).*)']
 };
-

@@ -28,6 +28,14 @@ export function SettingsMenu() {
     const newPath = pathname.replace(`/${locale}`, `/${nextLocale}`);
     router.replace(newPath);
   };
+  
+  const localeNames: Record<string, string> = {
+    en: 'English',
+    hi: 'हिंदी',
+    mr: 'मराठी',
+    gu: 'ગુજરાતી',
+    rj: 'राजस्थानी',
+  };
 
   return (
     <DropdownMenu>
@@ -56,7 +64,7 @@ export function SettingsMenu() {
         <DropdownMenuSub>
           <DropdownMenuSubTrigger>
             <Languages className="mr-2 h-4 w-4" />
-            <span>{locale === 'en' ? 'English' : 'हिंदी'}</span>
+            <span>{localeNames[locale] || 'Language'}</span>
           </DropdownMenuSubTrigger>
           <DropdownMenuSubContent>
             <DropdownMenuItem onClick={() => switchLocale('en')}>
@@ -64,6 +72,15 @@ export function SettingsMenu() {
             </DropdownMenuItem>
             <DropdownMenuItem onClick={() => switchLocale('hi')}>
               हिंदी
+            </DropdownMenuItem>
+             <DropdownMenuItem onClick={() => switchLocale('mr')}>
+              मराठी
+            </DropdownMenuItem>
+             <DropdownMenuItem onClick={() => switchLocale('gu')}>
+              ગુજરાતી
+            </DropdownMenuItem>
+             <DropdownMenuItem onClick={() => switchLocale('rj')}>
+              राजस्थानी
             </DropdownMenuItem>
           </DropdownMenuSubContent>
         </DropdownMenuSub>
