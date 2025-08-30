@@ -39,12 +39,6 @@ const nextConfig: NextConfig = {
         hostname: '5.imimg.com',
         port: '',
         pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: '6000-firebase-studio-1756468355437.cluster-ancjwrkgr5dvux4qug5rbzyc2y.cloudworkstations.dev',
-        port: '',
-        pathname: '/**',
       }
     ],
   },
