@@ -13,7 +13,7 @@ export default function ContactPage() {
       <div className="container mx-auto px-4 py-16 md:py-24">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-primary">Get a Quote or Just Say Hello</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-primary">Ask Your Queries</h1>
             <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
               We're here to help you with all your travel needs. Fill out the form below, and we'll get back to you shortly.
             </p>
