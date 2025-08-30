@@ -2,11 +2,12 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Car, Menu, Phone, Sparkles } from 'lucide-react';
+import { Car, Menu, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 import * as React from 'react';
+import Image from 'next/image';
 
 const mainNav = [
   { title: 'Home', href: '/' },
@@ -20,9 +21,9 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 max-w-7xl items-center">
+      <div className="container flex h-20 max-w-7xl items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
-          <Car className="h-6 w-6 text-primary" />
+          <Image src="/logo.png" alt="Royal Cabs Logo" width={50} height={50} className="rounded-full" />
           <span className="font-bold inline-block font-headline text-lg">Royal Cabs</span>
         </Link>
         <div className="flex flex-1 items-center justify-end space-x-2">
@@ -56,7 +57,7 @@ export function SiteHeader() {
               <div className="flex flex-col h-full">
                 <div className="flex items-center border-b pb-4">
                   <Link href="/" className="flex items-center space-x-2" onClick={() => setOpen(false)}>
-                    <Car className="h-6 w-6 text-primary" />
+                    <Image src="/logo.png" alt="Royal Cabs Logo" width={40} height={40} className="rounded-full" />
                     <span className="font-bold font-headline text-lg">Royal Cabs</span>
                   </Link>
                 </div>

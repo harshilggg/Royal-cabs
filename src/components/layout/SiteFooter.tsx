@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Car, Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
+import Image from 'next/image';
 
 export function SiteFooter() {
   return (
@@ -8,7 +9,7 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center space-x-2 mb-4">
-              <Car className="h-8 w-8 text-primary" />
+              <Image src="/logo.png" alt="Royal Cabs Logo" width={40} height={40} className="rounded-full" />
               <span className="font-bold text-xl font-headline">Royal Cabs</span>
             </Link>
             <p className="text-muted-foreground text-sm">
