@@ -12,6 +12,7 @@ import { BubbleBackground } from '@/components/BubbleBackground';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
 import { use } from 'react';
+import { GlobalAudio } from '@/components/GlobalAudio';
 
 const fontPoppins = Poppins({
   subsets: ['latin'],
@@ -93,9 +94,11 @@ export default function RootLayout({
             </div>
             <FloatingWhatsApp />
             <Toaster />
+            <GlobalAudio />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>
   );
 }
+
