@@ -3,7 +3,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Car, Clock, MapPin, ShieldCheck, Star, ThumbsUp, Wallet, Award, CarFront, UserCheck, Timer } from 'lucide-react';
+import { ArrowRight, Wallet, ShieldCheck, Star, Award, UserCheck } from 'lucide-react';
 import {
   Accordion,
   AccordionContent,
@@ -88,14 +88,14 @@ export default function Home() {
               </div>
               <div className="text-center p-6 bg-background/70 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105">
                 <div className="inline-block p-4 bg-primary text-primary-foreground rounded-full mb-4">
-                  <Timer className="h-8 w-8" />
+                  <Award className="h-8 w-8" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{t('whyChooseUs.experience.title')}</h3>
                 <p className="text-muted-foreground">{t('whyChooseUs.experience.description')}</p>
               </div>
               <div className="text-center p-6 bg-background/70 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105">
                 <div className="inline-block p-4 bg-primary text-primary-foreground rounded-full mb-4">
-                  <CarFront className="h-8 w-8" />
+                  <UserCheck className="h-8 w-8" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{t('whyChooseUs.comfort.title')}</h3>
                 <p className="text-muted-foreground">{t('whyChooseUs.comfort.description')}</p>
