@@ -3,10 +3,11 @@
 import Link from 'next/link';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import Image from 'next/image';
-import { useMessages } from 'next-intl';
+import { useTranslations } from 'next-intl';
 
 export function SiteFooter() {
-  const t = useMessages() as any;
+  const t = useTranslations('footer');
+  const tNav = useTranslations('navigation');
 
   return (
     <footer className="bg-card border-t">
@@ -15,38 +16,38 @@ export function SiteFooter() {
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center space-x-2 mb-4">
               <Image src="/icons/royal.png" alt="Royal Cabs Logo" width={40} height={40} className="rounded-full" />
-              <span className="font-bold text-xl font-headline">{t.navigation.brand}</span>
+              <span className="font-bold text-xl font-headline">{tNav('brand')}</span>
             </Link>
             <p className="text-muted-foreground text-sm">
-              {t.footer.tagline}
+              {t('tagline')}
             </p>
           </div>
           
           <div>
-            <h3 className="font-semibold font-headline text-lg mb-4">{t.footer.quickLinks}</h3>
+            <h3 className="font-semibold font-headline text-lg mb-4">{t('quickLinks')}</h3>
             <ul className="space-y-2">
-              <li><Link href="/" className="text-sm text-muted-foreground hover:text-primary">{t.navigation.home}</Link></li>
-              <li><Link href="/cars" className="text-sm text-muted-foreground hover:text-primary">{t.navigation.cars}</Link></li>
-              <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-primary">{t.navigation.contact}</Link></li>
+              <li><Link href="/" className="text-sm text-muted-foreground hover:text-primary">{tNav('home')}</Link></li>
+              <li><Link href="/cars" className="text-sm text-muted-foreground hover:text-primary">{tNav('cars')}</Link></li>
+              <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-primary">{tNav('contact')}</Link></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold font-headline text-lg mb-4">{t.footer.ourServices}</h3>
+            <h3 className="font-semibold font-headline text-lg mb-4">{t('ourServices')}</h3>
             <ul className="space-y-2">
-              <li className="text-sm text-muted-foreground">{t.footer.services.local}</li>
-              <li className="text-sm text-muted-foreground">{t.footer.services.outstation}</li>
-              <li className="text-sm text-muted-foreground">{t.footer.services.airport}</li>
-              <li className="text-sm text-muted-foreground">{t.footer.services.corporate}</li>
+              <li className="text-sm text-muted-foreground">{t('services.local')}</li>
+              <li className="text-sm text-muted-foreground">{t('services.outstation')}</li>
+              <li className="text-sm text-muted-foreground">{t('services.airport')}</li>
+              <li className="text-sm text-muted-foreground">{t('services.corporate')}</li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold font-headline text-lg mb-4">{t.footer.getInTouch}</h3>
+            <h3 className="font-semibold font-headline text-lg mb-4">{t('getInTouch')}</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="h-4 w-4 mt-1 mr-3 text-muted-foreground flex-shrink-0" />
-                <span className="text-sm text-muted-foreground">{t.footer.address}</span>
+                <span className="text-sm text-muted-foreground">{t('address')}</span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-4 w-4 mr-3 text-muted-foreground flex-shrink-0" />
@@ -61,9 +62,10 @@ export function SiteFooter() {
         </div>
         
         <div className="mt-8 border-t pt-6 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Royal Cabs. {t.footer.copyright}</p>
+          <p>&copy; {new Date().getFullYear()} {tNav('brand')}. {t('copyright')}</p>
         </div>
       </div>
     </footer>
   );
 }
+

@@ -1,4 +1,6 @@
 
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, Car, Clock, MapPin, ShieldCheck, Star, ThumbsUp, Wallet, Award, CarFront, UserCheck, Timer } from 'lucide-react';
@@ -21,9 +23,11 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { featuredCars, faqs, testimonials } from '@/lib/data';
 import { CarCard } from '@/components/CarCard';
 import { AnimateOnScroll } from '@/components/AnimateOnScroll';
-
+import { useTranslations } from 'next-intl';
 
 export default function Home() {
+  const t = useTranslations('home');
+
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -39,19 +43,19 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent" />
         <div className="relative z-10 max-w-4xl px-4 flex flex-col items-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white drop-shadow-lg font-headline animate-fadeInUp" style={{animationDelay: '0.2s', animationFillMode: 'backwards'}}>
-            Where Luxury Meets Budget
+            {t('hero.title')}
           </h1>
           <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto text-gray-200 drop-shadow-md animate-fadeInUp" style={{animationDelay: '0.4s', animationFillMode: 'backwards'}}>
-            Premium Taxi Services across Madhya Pradesh. Unmatched comfort, reliability, and style.
+            {t('hero.subtitle')}
           </p>
           <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4 w-full max-w-md animate-fadeInUp" style={{animationDelay: '0.6s', animationFillMode: 'backwards'}}>
             <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg transition-transform hover:scale-105">
               <Link href="/cars">
-                Book Your Ride <ArrowRight className="ml-2 h-5 w-5" />
+                {t('hero.bookRide')} <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             <Button asChild size="lg" variant="secondary" className="shadow-lg transition-transform hover:scale-105">
-              <Link href="/contact">Contact Now</Link>
+              <Link href="/contact">{t('hero.contactNow')}</Link>
             </Button>
           </div>
         </div>
@@ -62,9 +66,9 @@ export default function Home() {
         <section className="py-16 md:py-24 bg-card/80 backdrop-blur-sm">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary">Why Ride with Royal Cabs?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary">{t('whyChooseUs.title')}</h2>
               <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
-                We are committed to providing a superior travel experience with every ride.
+                {t('whyChooseUs.subtitle')}
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -72,29 +76,29 @@ export default function Home() {
                 <div className="inline-block p-4 bg-primary text-primary-foreground rounded-full mb-4">
                   <ShieldCheck className="h-8 w-8" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Safety First</h3>
-                <p className="text-muted-foreground">Verified drivers and well-maintained cars to ensure your peace of mind.</p>
+                <h3 className="text-xl font-semibold mb-2">{t('whyChooseUs.safety.title')}</h3>
+                <p className="text-muted-foreground">{t('whyChooseUs.safety.description')}</p>
               </div>
               <div className="text-center p-6 bg-background/70 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105">
                 <div className="inline-block p-4 bg-primary text-primary-foreground rounded-full mb-4">
                   <Wallet className="h-8 w-8" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Transparent Pricing</h3>
-                <p className="text-muted-foreground">No hidden charges. See the rates for your trip upfront.</p>
+                <h3 className="text-xl font-semibold mb-2">{t('whyChooseUs.pricing.title')}</h3>
+                <p className="text-muted-foreground">{t('whyChooseUs.pricing.description')}</p>
               </div>
               <div className="text-center p-6 bg-background/70 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105">
                 <div className="inline-block p-4 bg-primary text-primary-foreground rounded-full mb-4">
                   <Timer className="h-8 w-8" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">23+ Years of Service</h3>
-                <p className="text-muted-foreground">Proudly serving Madhya Pradesh with reliable transport for over two decades.</p>
+                <h3 className="text-xl font-semibold mb-2">{t('whyChooseUs.experience.title')}</h3>
+                <p className="text-muted-foreground">{t('whyChooseUs.experience.description')}</p>
               </div>
               <div className="text-center p-6 bg-background/70 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105">
                 <div className="inline-block p-4 bg-primary text-primary-foreground rounded-full mb-4">
                   <CarFront className="h-8 w-8" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Top-Notch Comfort</h3>
-                <p className="text-muted-foreground">Clean, comfortable, and air-conditioned vehicles for a pleasant journey.</p>
+                <h3 className="text-xl font-semibold mb-2">{t('whyChooseUs.comfort.title')}</h3>
+                <p className="text-muted-foreground">{t('whyChooseUs.comfort.description')}</p>
               </div>
             </div>
           </div>
@@ -106,9 +110,9 @@ export default function Home() {
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary">Explore Our Fleet</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary">{t('ourFleet.title')}</h2>
               <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
-                A diverse range of vehicles to suit every need and occasion, from solo trips to large group travel.
+                {t('ourFleet.subtitle')}
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -119,7 +123,7 @@ export default function Home() {
             <div className="text-center mt-12">
               <Button asChild size="lg" variant="outline" className="transition-transform hover:scale-105">
                 <Link href="/cars">
-                  View All Cars <ArrowRight className="ml-2 h-5 w-5" />
+                  {t('ourFleet.viewAll')} <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
             </div>
@@ -132,9 +136,9 @@ export default function Home() {
         <section className="py-16 md:py-24 bg-card/80 backdrop-blur-sm">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary">What Our Customers Say</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary">{t('testimonials.title')}</h2>
               <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
-                We take pride in our service, and our clients' feedback speaks for itself.
+                {t('testimonials.subtitle')}
               </p>
             </div>
             <Carousel
@@ -184,9 +188,9 @@ export default function Home() {
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4 max-w-3xl">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary">Frequently Asked Questions</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary">{t('faq.title')}</h2>
               <p className="mt-2 text-lg text-muted-foreground">
-                Have questions? We have answers.
+                {t('faq.subtitle')}
               </p>
             </div>
             <Accordion type="single" collapsible className="w-full">

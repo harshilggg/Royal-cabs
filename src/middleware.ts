@@ -11,3 +11,4 @@ export const config = {
   // folders "api", "images" and "_next" (that internal to Next.js).
   matcher: ['/((?!api|images|_next|icons|.*\\..*).*)']
 };
+

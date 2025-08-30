@@ -1,15 +1,15 @@
 
+'use client';
+
 import { ContactForm } from '@/components/ContactForm';
 import { Mail, MapPin, Phone } from 'lucide-react';
 import type { Metadata } from 'next';
 import Image from 'next/image';
-
-export const metadata: Metadata = {
-  title: 'Contact Us - Royal Cabs',
-  description: 'Get in touch with Royal Cabs for bookings, quotes, or any inquiries. We are available 24/7 to assist you.',
-};
+import { useTranslations } from 'next-intl';
 
 export default function ContactPage() {
+  const t = useTranslations('contactPage');
+
   return (
     <div className="bg-card">
       <div className="container mx-auto px-4 py-16 md:py-24">
@@ -22,17 +22,17 @@ export default function ContactPage() {
               height={100} 
               className="mx-auto mb-6 rounded-lg"
             />
-            <h1 className="text-4xl md:text-5xl font-bold text-primary">Ask Your Queries</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-primary">{t('title')}</h1>
             <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
-              We're here to help you with all your travel needs. Fill out the form below, and we'll get back to you shortly.
+              {t('subtitle')}
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-12 bg-background p-8 rounded-xl shadow-lg">
             <div className="flex flex-col justify-between">
               <div>
-                <h2 className="text-2xl font-bold mb-4 text-primary">Contact Information</h2>
+                <h2 className="text-2xl font-bold mb-4 text-primary">{t('contactInfo')}</h2>
                 <p className="text-muted-foreground mb-6">
-                  For immediate assistance or bookings, feel free to reach out to us directly through phone or email. Our team is centered in Jabalpur and serves all of MP.
+                  {t('contactDescription')}
                 </p>
                 <ul className="space-y-4">
                   <li className="flex items-center">
@@ -54,8 +54,8 @@ export default function ContactPage() {
                 </ul>
               </div>
               <div className="mt-8">
-                 <h3 className="text-lg font-semibold mb-2">Business Hours</h3>
-                 <p className="text-muted-foreground">Available 24 hours a day, 7 days a week.</p>
+                 <h3 className="text-lg font-semibold mb-2">{t('businessHours')}</h3>
+                 <p className="text-muted-foreground">{t('availability')}</p>
               </div>
             </div>
             <div>
@@ -67,3 +67,4 @@ export default function ContactPage() {
     </div>
   );
 }
+

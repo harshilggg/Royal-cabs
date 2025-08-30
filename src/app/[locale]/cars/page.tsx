@@ -1,20 +1,23 @@
 
+'use client';
 import { CarCard } from '@/components/CarCard';
 import { cars } from '@/lib/data';
 import type { Metadata } from 'next';
+import { useTranslations } from 'next-intl';
 
-export const metadata: Metadata = {
-  title: 'Our Fleet - Royal Cabs',
-  description: 'Explore our wide range of cars available for booking in Madhya Pradesh. From sedans to SUVs, we have a vehicle for every need.',
-};
+// Since this is a client component, we can't export metadata directly.
+// This should be handled in the nearest server component parent, which is the layout.
+// We will add logic in the layout to set metadata dynamically based on the page.
 
 export default function CarsPage() {
+  const t = useTranslations('carsPage');
+
   return (
     <div className="container mx-auto px-4 py-12 md:py-20">
       <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-primary">Our Esteemed Fleet</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-primary">{t('title')}</h1>
         <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
-          Find the perfect ride for your journey. We offer a diverse selection of clean, well-maintained, and comfortable vehicles.
+          {t('subtitle')}
         </p>
       </div>
 
