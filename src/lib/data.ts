@@ -60,7 +60,7 @@ export const cars: Car[] = [
     id: '6',
     name: 'Bus',
     slug: 'bus',
-    images: ['/bus.jpg', '/bus1.jpg'],
+    images: ['/bus.jpg'],
     capacity: 25, // 24+1
     baggage: 20,
     type: 'Bus',
