@@ -30,14 +30,14 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative h-[70vh] md:h-[90vh] w-full flex items-center justify-center text-center text-white">
-        <Image
-          src="https://picsum.photos/1920/1080"
-          alt="Royal Cabs taxi driving on a scenic road"
-          data-ai-hint="luxury car front"
-          fill
-          className="object-cover"
-          priority
+      <section className="relative h-[70vh] md:h-[90vh] w-full flex items-center justify-center text-center text-white overflow-hidden">
+        <video
+          src="/video.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent" />
         <div className="relative z-10 max-w-4xl px-4 flex flex-col items-center">
