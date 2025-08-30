@@ -85,7 +85,7 @@
     width: var(--size);
     height: var(--size);
     background-color: var(--color);
-    animation: pulse 5s infinite alternate;
+    animation: float 20s infinite ease-in-out;
     animation-delay: var(--delay);
     transition: transform 0.3s ease-in-out;
   }
@@ -94,13 +94,14 @@
   }
 }
 
-@keyframes pulse {
-  from {
-    transform: scale(1);
-    opacity: 0.5;
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
   }
-  to {
-    transform: scale(1.1);
-    opacity: 0.8;
+  50% {
+    transform: translateY(-20px) translateX(10px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
   }
 }
