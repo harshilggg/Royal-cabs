@@ -1,25 +1,31 @@
 'use client';
 
-import { useMemo } from 'react';
+import { useState, useEffect } from 'react';
 
-// A simple component to generate a list of random properties for bubbles
-const useBubbles = (count: number) => {
-  return useMemo(() => {
-    return Array.from({ length: count }).map((_, i) => ({
-      id: i,
-      style: {
-        '--size': `${Math.random() * 20 + 5}vmin`,
-        '--color': `hsl(var(--${['primary', 'secondary', 'accent'][Math.floor(Math.random() * 3)]}) / ${Math.random() * 0.3 + 0.1})`,
-        '--x': `${Math.random() * 100}%`,
-        '--delay': `${Math.random() * 25}s`,
-      } as React.CSSProperties
-    }));
-  }, [count]);
+interface Bubble {
+  id: number;
+  style: React.CSSProperties;
+}
+
+const generateBubbles = (count: number): Bubble[] => {
+  return Array.from({ length: count }).map((_, i) => ({
+    id: i,
+    style: {
+      '--size': `${Math.random() * 20 + 5}vmin`,
+      '--color': `hsl(var(--${['primary', 'secondary', 'accent'][Math.floor(Math.random() * 3)]}) / ${Math.random() * 0.3 + 0.1})`,
+      '--x': `${Math.random() * 100}%`,
+      '--delay': `${Math.random() * 25}s`,
+    } as React.CSSProperties,
+  }));
 };
 
-
 export function BubbleBackground() {
-  const bubbles = useBubbles(20); // Generate 20 bubbles
+  const [bubbles, setBubbles] = useState<Bubble[]>([]);
+
+  useEffect(() => {
+    // Generate bubbles only on the client-side after initial render
+    setBubbles(generateBubbles(20));
+  }, []);
 
   return (
     <div className="bubble-background" aria-hidden="true">
