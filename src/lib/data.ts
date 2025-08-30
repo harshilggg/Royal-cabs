@@ -3,10 +3,32 @@ import type { Car, Testimonial, FAQ } from '@/lib/types';
 
 export const cars: Car[] = [
   {
+    id: '7',
+    name: 'Innova',
+    slug: 'innova',
+    images: ['/inova.jpg'],
+    capacity: 8, // 7+1
+    baggage: 5,
+    type: 'SUV',
+    description: 'A highly popular and reliable choice for outstation travel, offering premium comfort and space for 7 passengers plus a driver.',
+    features: ['Air Conditioning', 'Premium Audio', 'Extra Baggage Space'],
+  },
+  {
+    id: '3',
+    name: 'Toyota Innova Crysta',
+    slug: 'toyota-innova-crysta',
+    images: ['/cryta.jpg'],
+    capacity: 8, // 7+1
+    baggage: 5,
+    type: 'SUV',
+    description: 'The perfect MUV for family trips and outstation travel, seating 7 passengers plus a driver. Offers premium comfort and space.',
+    features: ['Air Conditioning', 'Captain Seats', 'Premium Audio', 'Extra Baggage Space'],
+  },
+  {
     id: '1',
     name: 'Maruti Suzuki Dzire',
     slug: 'maruti-suzuki-dzire',
-    images: ['https://imgd.aeplcdn.com/1280x720/n/cw/ec/45691/dzire-exterior-right-front-three-quarter.jpeg?q=80'],
+    images: ['/dzire.jpg'],
     capacity: 5, // 4+1
     baggage: 2,
     type: 'Sedan',
@@ -21,25 +43,14 @@ export const cars: Car[] = [
     capacity: 8, // 7+1
     baggage: 4,
     type: 'SUV',
-    description: 'A stylish and modern SUV with flexible seating, perfect for families who need extra space and comfort.',
+    description: 'A stylish and modern SUV with flexible seating for 7 passengers plus a driver, perfect for families who need extra space and comfort.',
     features: ['Air Conditioning', 'Premium Audio', 'Sunroof', 'Spacious Interior'],
   },
   {
-    id: '3',
-    name: 'Toyota Innova Crysta',
-    slug: 'toyota-innova-crysta',
-    images: ['https://imgd.aeplcdn.com/1280x720/n/cw/ec/140809/innova-crysta-exterior-right-front-three-quarter.jpeg?isig=0'],
-    capacity: 8, // 7+1
-    baggage: 5,
-    type: 'SUV',
-    description: 'The perfect MUV for family trips and outstation travel, seating 7 passengers plus a driver. Offers premium comfort and space.',
-    features: ['Air Conditioning', 'Captain Seats', 'Premium Audio', 'Extra Baggage Space'],
-  },
-  {
     id: '4',
-    name: 'Tempo Traveller',
+    name: 'Tempo / Traveller',
     slug: 'tempo-traveller',
-    images: ['https://imgd.aeplcdn.com/1280x720/n/cw/ec/49385/force-traveller-3700-exterior-2.jpeg?q=80'],
+    images: ['/tourist.jpg'],
     capacity: 13, // 12+1
     baggage: 10,
     type: 'Van',
@@ -54,7 +65,7 @@ export const cars: Car[] = [
     capacity: 18, // 17+1
     baggage: 15,
     type: 'Van',
-    description: 'A premium and spacious van for larger groups seeking extra comfort and a touch of luxury on their travels.',
+    description: 'A premium and spacious van for larger groups of 17 plus a driver, seeking extra comfort and a touch of luxury on their travels.',
     features: ['Air Conditioning', 'Reclining Seats', 'LED Lights', 'Ample Space'],
   },
   {
@@ -95,7 +106,7 @@ export const testimonials: Testimonial[] = [
     name: 'Vikram Singh',
     location: 'Jabalpur',
     comment: 'Used their airport transfer service from my home in Jabalpur. The cab arrived before time and the ride was smooth. Much better than regular airport taxis. Will use again.',
-    avatar: 'https://i.pravatar.cc/150?img=7',
+    avatar: 'https://i.prav-atar.cc/150?img=7',
   },
 ];
 
