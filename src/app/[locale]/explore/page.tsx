@@ -108,7 +108,16 @@ export default function ExplorePage() {
 
         {/* Other Destinations */}
         <section>
-          <h2 className="text-3xl font-bold text-center mb-12 text-primary">{t('otherDestinationsTitle')}</h2>
+          <div className="text-center mb-12">
+             <Image 
+                src="/icons/royal.png" 
+                alt="Royal Cabs Logo" 
+                width={100} 
+                height={100} 
+                className="mx-auto mb-6 rounded-lg"
+            />
+            <h2 className="text-3xl font-bold text-center text-primary">{t('otherDestinationsTitle')}</h2>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
             {otherPlaces.map((place, index) => (
               <PlaceCard key={index} place={place} t={t} />
