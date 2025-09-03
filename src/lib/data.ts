@@ -145,7 +145,7 @@ export const faqs: FAQ[] = [
     }
 ];
 
-export const places: Place[] = [
+export const jabalpurPlaces: Place[] = [
   {
     name: 'Bhedaghat',
     image: 'https://picsum.photos/800/600?random=1',
@@ -188,6 +188,9 @@ export const places: Place[] = [
     mapLink: 'https://maps.app.goo.gl/GsrwMaKXX9mRWuSB7',
     description: 'An ancient 10th-century temple dedicated to 64 yoginis, located atop a hill.'
   },
+];
+
+export const otherPlaces: Place[] = [
   {
     name: 'Kanha National Park',
     image: 'https://picsum.photos/800/600?random=8',

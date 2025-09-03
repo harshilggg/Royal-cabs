@@ -65,9 +65,16 @@
     }
   },
   "explorePage": {
-    "title": "Explore Nearby Destinations",
+    "title": "Explore Madhya Pradesh",
     "subtitle": "Discover the beauty and heritage of Madhya Pradesh. We offer comfortable and reliable taxi services to all these amazing locations.",
-    "viewOnMap": "View on Map"
+    "viewOnMap": "View on Map",
+    "bookThisTrip": "Book This Trip",
+    "jabalpurTitle": "Jabalpur - The Marble City",
+    "otherDestinationsTitle": "Destinations Across Madhya Pradesh",
+    "finalCta": {
+      "title": "For these and more locations",
+      "button": "Book Now"
+    }
   },
   "carsPage": {
     "title": "Our Esteemed Fleet",
