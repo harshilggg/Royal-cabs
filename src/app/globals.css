@@ -39,8 +39,8 @@
     --card-foreground: 210 40% 98%;
     --popover: 224 71% 4%;
     --popover-foreground: 210 40% 98%;
-    --primary: 196 78% 58%; /* Teal */
-    --primary-foreground: 224 71% 4%;
+    --primary: 0 74% 24%; /* Deep Maroon */
+    --primary-foreground: 0 0% 98%;
     --secondary: 215 28% 17%;
     --secondary-foreground: 210 40% 98%;
     --muted: 215 28% 17%;
@@ -51,7 +51,7 @@
     --destructive-foreground: 210 40% 98%;
     --border: 215 28% 17%;
     --input: 215 28% 17%;
-    --ring: 196 78% 58%;
+    --ring: 0 74% 24%;
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
