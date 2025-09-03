@@ -1,13 +1,14 @@
 
 'use client';
 import { AnimateOnScroll } from '@/components/AnimateOnScroll';
+import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { jabalpurPlaces, otherPlaces } from '@/lib/data';
+import type { Place } from '@/lib/types';
 import { MapPin, Phone, ArrowRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import Link from 'next/link';
 import {
   Carousel,
   CarouselContent,
@@ -17,11 +18,11 @@ import {
 } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
 
-const PlaceCard = ({ place, t }: { place: any; t: any }) => {
+const PlaceCard = ({ place, t }: { place: Place; t: any }) => {
   const bookingMessage = `Hi! I'd like to book a cab to ${place.name}.`;
   return (
     <Card className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 h-full group hover:-translate-y-2">
-      <CardHeader className="p-0">
+      <CardHeader className="p-0 relative">
         <div className="relative w-full h-56 overflow-hidden">
           <Image
             src={place.image}
@@ -31,6 +32,9 @@ const PlaceCard = ({ place, t }: { place: any; t: any }) => {
             className="object-cover group-hover:scale-105 transition-transform duration-500"
           />
         </div>
+        {place.tag && (
+            <Badge className="absolute top-2 right-2" variant="destructive">{place.tag}</Badge>
+        )}
       </CardHeader>
       <CardContent className="p-4 flex-grow flex flex-col">
         <CardTitle className="text-xl mb-2">{place.name}</CardTitle>
@@ -76,8 +80,8 @@ export default function ExplorePage() {
 
         {/* Jabalpur Section */}
         <section className="mb-16">
-          <div className="relative rounded-lg overflow-hidden mb-8">
-            <Image src="https://picsum.photos/1200/400" alt="Kamaniy Gate" width={1200} height={400} data-ai-hint="historic gate" className="w-full h-auto object-cover"/>
+          <div className="relative rounded-lg overflow-hidden mb-8 shadow-2xl">
+            <Image src="/8.jpg" alt="Kamaniy Gate" width={1200} height={400} data-ai-hint="historic gate" className="w-full h-auto object-cover"/>
             <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
               <h2 className="text-4xl font-bold text-white drop-shadow-lg">{t('jabalpurTitle')}</h2>
             </div>

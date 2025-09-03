@@ -28,4 +28,5 @@ export interface Place {
   image: string;
   mapLink: string;
   description: string;
+  tag?: string;
 }

@@ -151,95 +151,110 @@ export const jabalpurPlaces: Place[] = [
     name: 'Madan Mahal Fort',
     image: '/1.jpg',
     mapLink: 'https://maps.app.goo.gl/awgU7ARDMt2SxJRV9',
-    description: 'A historic fort built by the Gond rulers, offering panoramic views of Jabalpur.'
+    description: 'A historic fort built by the Gond rulers, offering panoramic views of Jabalpur.',
+    tag: 'Historic',
   },
   {
     name: 'Bargi Dam',
     image: '/2.jpg',
     mapLink: 'https://maps.app.goo.gl/xufobUEfQysuY3Wh7',
-    description: 'A major dam on the Narmada river, offering boating and scenic views.'
+    description: 'A major dam on the Narmada river, offering boating and scenic views.',
+    tag: 'Scenic',
   },
   {
     name: 'Kachnar City',
     image: '/3.jpg',
     mapLink: 'https://maps.app.goo.gl/Mj5zLpLERtRy8jov5',
-    description: 'Home to a giant 76-feet tall statue of Lord Shiva, a popular pilgrimage site.'
+    description: 'Home to a giant 76-feet tall statue of Lord Shiva, a popular pilgrimage site.',
+    tag: 'Pilgrimage',
   },
   {
     name: 'Gwarighat',
     image: '/4.jpg',
     mapLink: 'https://maps.app.goo.gl/v7HMoCPWMaXnPPQZ9',
-    description: 'A sacred ghat on the banks of the Narmada river, known for its evening aarti.'
+    description: 'A sacred ghat on the banks of the Narmada river, known for its evening aarti.',
+    tag: 'Sacred',
   },
   {
     name: 'Chausath Yogini Temple',
     image: '/5.jpg',
     mapLink: 'https://maps.app.goo.gl/GsrwMaKXX9mRWuSB7',
-    description: 'An ancient 10th-century temple dedicated to 64 yoginis, located atop a hill.'
+    description: 'An ancient 10th-century temple dedicated to 64 yoginis, located atop a hill.',
+    tag: 'Ancient',
   },
   {
     name: 'Bhedaghat',
     image: '/6.jpg',
     mapLink: 'https://maps.app.goo.gl/XdLwypQY4gT3AeG66',
-    description: 'Famous for its towering marble rocks forming a stunning gorge on the Narmada river.'
+    description: 'Famous for its towering marble rocks forming a stunning gorge on the Narmada river.',
+    tag: 'Top Attraction',
   },
   {
     name: 'Dhuandhar Waterfall',
     image: '/7.jpg',
     mapLink: 'https://www.google.com/maps/place/Dhuandhar+Waterfall/@23.1314757,79.8013454,16z/data=!4m6!3m5!1s0x3981b41586923e59:0x647f072cfb1ee18e!8m2!3d23.1262738!4d79.8075411!16s%2Fm%2F0gj8zhp?entry=ttu&g_ep=EgoyMDI1MDgzMC4wIKXMDSoASAFQAw%3D%3D',
-    description: 'A spectacular waterfall where the Narmada river cascades down with immense force.'
+    description: 'A spectacular waterfall where the Narmada river cascades down with immense force.',
+    tag: 'Must See',
   },
   {
     name: 'Balancing Rock',
     image: '/balancing_rock.jpg',
     mapLink: 'https://maps.app.goo.gl/7ULChcjERJNUwM169',
-    description: 'A geological wonder where a massive rock is naturally balanced on another.'
+    description: 'A geological wonder where a massive rock is naturally balanced on another.',
+    tag: 'Wonder',
   },
 ];
 
 export const otherPlaces: Place[] = [
   {
-    name: 'Kanha National Park',
-    image: 'https://picsum.photos/seed/kanha/800/600',
-    mapLink: 'https://maps.app.goo.gl/Jkzr3fUGrF1kU3Hy6',
-    description: 'A vast expanse of grassland and forest, home to the majestic Royal Bengal Tiger.'
-  },
-  {
-    name: 'Bandhavgarh National Park',
-    image: 'https://picsum.photos/seed/bandhavgarh/800/600',
-    mapLink: 'https://maps.app.goo.gl/Mj24XN8dGwxV6fY17',
-    description: 'Known for its high density of tigers, this park offers incredible wildlife sightings.'
-  },
-  {
-    name: 'Pachmarhi',
-    image: 'https://picsum.photos/seed/pachmarhi/800/600',
-    mapLink: 'https://maps.app.goo.gl/zgCvTFMwk9Usct7C7',
-    description: 'A serene hill station in Madhya Pradesh, known for its waterfalls and ancient caves.'
-  },
-  {
     name: 'Ujjain',
-    image: 'https://picsum.photos/seed/ujjain/800/600',
+    image: '/9.jpg',
     mapLink: 'https://maps.app.goo.gl/eKesfTG15FdTqd9J6',
-    description: 'An ancient city beside the Kshipra River, one of the seven sacred sites of Hinduism.'
+    description: 'An ancient city beside the Kshipra River, one of the seven sacred sites of Hinduism.',
+    tag: 'Pilgrimage',
   },
   {
     name: 'Omkareshwar',
-    image: 'https://picsum.photos/seed/omkareshwar/800/600',
+    image: '/10.jpg',
     mapLink: 'https://maps.app.goo.gl/yLQZyVjKAZxvw9Lk9',
-    description: 'A sacred island shaped like the "Om" symbol, home to a Jyotirlinga shrine.'
+    description: 'A sacred island shaped like the "Om" symbol, home to a Jyotirlinga shrine.',
+    tag: 'Pilgrimage',
   },
   {
     name: 'Amarkantak',
-    image: 'https://picsum.photos/seed/amarkantak/800/600',
+    image: '/11.jpg',
     mapLink: 'https://maps.app.goo.gl/CQKpDQiHLqmLhSh9A',
-    description: 'A pilgrim town and the source of the Narmada and Sone rivers.'
+    description: 'A pilgrim town and the source of the Narmada and Sone rivers.',
+    tag: 'Holy Place',
   },
   {
     name: 'Khajuraho',
-    image: 'https://picsum.photos/seed/khajuraho/800/600',
+    image: '/12.jpg',
     mapLink: 'https://maps.app.goo.gl/X8CTWVCwNb3M7ANJA',
-    description: 'Famous for its stunning temples adorned with intricate and erotic sculptures.'
-  }
+    description: 'Famous for its stunning temples adorned with intricate and erotic sculptures.',
+    tag: 'UNESCO Site',
+  },
+  {
+    name: 'Pachmarhi',
+    image: '/13.jpg',
+    mapLink: 'https://maps.app.goo.gl/zgCvTFMwk9Usct7C7',
+    description: 'A serene hill station in Madhya Pradesh, known for its waterfalls and ancient caves.',
+    tag: 'Hill Station',
+  },
+  {
+    name: 'Kanha National Park',
+    image: '/14.jpg',
+    mapLink: 'https://maps.app.goo.gl/Jkzr3fUGrF1kU3Hy6',
+    description: 'A vast expanse of grassland and forest, home to the majestic Royal Bengal Tiger.',
+    tag: 'Wildlife',
+  },
+  {
+    name: 'Bandhavgarh National Park',
+    image: '/15.jpg',
+    mapLink: 'https://maps.app.goo.gl/Mj24XN8dGwxV6fY17',
+    description: 'Known for its high density of tigers, this park offers incredible wildlife sightings.',
+    tag: 'Must Visit',
+  },
 ];
 
 
