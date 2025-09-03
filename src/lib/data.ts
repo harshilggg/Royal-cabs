@@ -149,45 +149,51 @@ export const faqs: FAQ[] = [
 export const jabalpurPlaces: Place[] = [
   {
     name: 'Madan Mahal Fort',
-    image: '/madan_mahal.jpg',
+    image: '/1.jpg',
     mapLink: 'https://maps.app.goo.gl/awgU7ARDMt2SxJRV9',
     description: 'A historic fort built by the Gond rulers, offering panoramic views of Jabalpur.'
   },
   {
     name: 'Bargi Dam',
-    image: '/bargi_dam.jpg',
+    image: '/2.jpg',
     mapLink: 'https://maps.app.goo.gl/xufobUEfQysuY3Wh7',
     description: 'A major dam on the Narmada river, offering boating and scenic views.'
   },
   {
     name: 'Kachnar City',
-    image: '/kachnar_city.jpg',
+    image: '/3.jpg',
     mapLink: 'https://maps.app.goo.gl/Mj5zLpLERtRy8jov5',
     description: 'Home to a giant 76-feet tall statue of Lord Shiva, a popular pilgrimage site.'
   },
   {
     name: 'Gwarighat',
-    image: '/gwarighat.jpg',
+    image: '/4.jpg',
     mapLink: 'https://maps.app.goo.gl/v7HMoCPWMaXnPPQZ9',
     description: 'A sacred ghat on the banks of the Narmada river, known for its evening aarti.'
   },
   {
     name: 'Chausath Yogini Temple',
-    image: '/chausath_yogini.jpg',
+    image: '/5.jpg',
     mapLink: 'https://maps.app.goo.gl/GsrwMaKXX9mRWuSB7',
     description: 'An ancient 10th-century temple dedicated to 64 yoginis, located atop a hill.'
   },
   {
     name: 'Bhedaghat',
-    image: '/bhedaghat.jpg',
+    image: '/6.jpg',
     mapLink: 'https://maps.app.goo.gl/XdLwypQY4gT3AeG66',
     description: 'Famous for its towering marble rocks forming a stunning gorge on the Narmada river.'
   },
   {
     name: 'Dhuandhar Waterfall',
-    image: '/dhuandhar.jpg',
+    image: '/7.jpg',
     mapLink: 'https://www.google.com/maps/place/Dhuandhar+Waterfall/@23.1314757,79.8013454,16z/data=!4m6!3m5!1s0x3981b41586923e59:0x647f072cfb1ee18e!8m2!3d23.1262738!4d79.8075411!16s%2Fm%2F0gj8zhp?entry=ttu&g_ep=EgoyMDI1MDgzMC4wIKXMDSoASAFQAw%3D%3D',
     description: 'A spectacular waterfall where the Narmada river cascades down with immense force.'
+  },
+  {
+    name: 'Balancing Rock',
+    image: '/balancing_rock.jpg',
+    mapLink: 'https://maps.app.goo.gl/7ULChcjERJNUwM169',
+    description: 'A geological wonder where a massive rock is naturally balanced on another.'
   },
 ];
 
