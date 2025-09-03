@@ -81,7 +81,7 @@ export default function ExplorePage() {
         {/* Jabalpur Section */}
         <section className="mb-16">
           <div className="relative rounded-lg overflow-hidden mb-8 shadow-2xl">
-            <Image src="/8.jpg" alt="Kamaniy Gate" width={1200} height={400} data-ai-hint="historic gate" className="w-full h-auto object-cover"/>
+            <Image src="/8.jpg" alt="Jabalpur Landmark" width={1200} height={400} data-ai-hint="historic gate" className="w-full h-auto object-cover"/>
             <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
               <h2 className="text-4xl font-bold text-white drop-shadow-lg">{t('jabalpurTitle')}</h2>
             </div>
