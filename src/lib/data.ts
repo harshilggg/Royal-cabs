@@ -167,7 +167,7 @@ export const jabalpurPlaces: Place[] = [
   },
   {
     name: 'Balancing Rock',
-    image: 'https://picsum.photos/seed/balancingrock/800/600',
+    image: '/balancing-rock.jpg',
     mapLink: 'https://maps.app.goo.gl/7ULChcjERJNUwM169',
     description: 'A geological marvel, this is a massive rock balanced on another rock.'
   },
