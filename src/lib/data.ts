@@ -1,3 +1,4 @@
+
 import type { Car, Testimonial, FAQ, Place } from '@/lib/types';
 
 export const cars: Car[] = [
@@ -148,43 +149,43 @@ export const faqs: FAQ[] = [
 export const jabalpurPlaces: Place[] = [
   {
     name: 'Bhedaghat',
-    image: 'https://picsum.photos/800/600?random=1',
+    image: 'https://picsum.photos/seed/bhedaghat/800/600',
     mapLink: 'https://maps.app.goo.gl/XdLwypQY4gT3AeG66',
     description: 'Famous for its marble rocks and Dhuandhar falls, a stunning gorge on the Narmada river.'
   },
   {
     name: 'Bargi Dam',
-    image: 'https://picsum.photos/800/600?random=2',
+    image: 'https://picsum.photos/seed/bargi/800/600',
     mapLink: 'https://maps.app.goo.gl/xufobUEfQysuY3Wh7',
     description: 'A major dam on the Narmada river, offering boating and scenic views.'
   },
   {
     name: 'Madan Mahal Fort',
-    image: 'https://picsum.photos/800/600?random=3',
+    image: 'https://picsum.photos/seed/madanmahal/800/600',
     mapLink: 'https://maps.app.goo.gl/awgU7ARDMt2SxJRV9',
     description: 'A historic fort built by the Gond rulers, offering panoramic views of Jabalpur.'
   },
   {
     name: 'Balancing Rock',
-    image: 'https://picsum.photos/800/600?random=4',
+    image: 'https://picsum.photos/seed/balancingrock/800/600',
     mapLink: 'https://maps.app.goo.gl/7ULChcjERJNUwM169',
     description: 'A geological marvel, this is a massive rock balanced on another rock.'
   },
   {
     name: 'Kachnar City',
-    image: 'https://picsum.photos/800/600?random=5',
+    image: 'https://picsum.photos/seed/kachnar/800/600',
     mapLink: 'https://maps.app.goo.gl/Mj5zLpLERtRy8jov5',
     description: 'Home to a giant 76-feet tall statue of Lord Shiva, a popular pilgrimage site.'
   },
   {
     name: 'Gwarighat',
-    image: 'https://picsum.photos/800/600?random=6',
+    image: 'https://picsum.photos/seed/gwarighat/800/600',
     mapLink: 'https://maps.app.goo.gl/v7HMoCPWMaXnPPQZ9',
     description: 'A sacred ghat on the banks of the Narmada river, known for its evening aarti.'
   },
   {
     name: 'Chausath Yogini Temple',
-    image: 'https://picsum.photos/800/600?random=7',
+    image: 'https://picsum.photos/seed/chausathyogini/800/600',
     mapLink: 'https://maps.app.goo.gl/GsrwMaKXX9mRWuSB7',
     description: 'An ancient 10th-century temple dedicated to 64 yoginis, located atop a hill.'
   },
@@ -193,43 +194,43 @@ export const jabalpurPlaces: Place[] = [
 export const otherPlaces: Place[] = [
   {
     name: 'Kanha National Park',
-    image: 'https://picsum.photos/800/600?random=8',
+    image: 'https://picsum.photos/seed/kanha/800/600',
     mapLink: 'https://maps.app.goo.gl/Jkzr3fUGrF1kU3Hy6',
     description: 'A vast expanse of grassland and forest, home to the majestic Royal Bengal Tiger.'
   },
   {
     name: 'Bandhavgarh National Park',
-    image: 'https://picsum.photos/800/600?random=9',
+    image: 'https://picsum.photos/seed/bandhavgarh/800/600',
     mapLink: 'https://maps.app.goo.gl/Mj24XN8dGwxV6fY17',
     description: 'Known for its high density of tigers, this park offers incredible wildlife sightings.'
   },
   {
     name: 'Pachmarhi',
-    image: 'https://picsum.photos/800/600?random=10',
+    image: 'https://picsum.photos/seed/pachmarhi/800/600',
     mapLink: 'https://maps.app.goo.gl/zgCvTFMwk9Usct7C7',
     description: 'A serene hill station in Madhya Pradesh, known for its waterfalls and ancient caves.'
   },
   {
     name: 'Ujjain',
-    image: 'https://picsum.photos/800/600?random=11',
+    image: 'https://picsum.photos/seed/ujjain/800/600',
     mapLink: 'https://maps.app.goo.gl/eKesfTG15FdTqd9J6',
     description: 'An ancient city beside the Kshipra River, one of the seven sacred sites of Hinduism.'
   },
   {
     name: 'Omkareshwar',
-    image: 'https://picsum.photos/800/600?random=12',
+    image: 'https://picsum.photos/seed/omkareshwar/800/600',
     mapLink: 'https://maps.app.goo.gl/yLQZyVjKAZxvw9Lk9',
     description: 'A sacred island shaped like the "Om" symbol, home to a Jyotirlinga shrine.'
   },
   {
     name: 'Amarkantak',
-    image: 'https://picsum.photos/800/600?random=13',
+    image: 'https://picsum.photos/seed/amarkantak/800/600',
     mapLink: 'https://maps.app.goo.gl/CQKpDQiHLqmLhSh9A',
     description: 'A pilgrim town and the source of the Narmada and Sone rivers.'
   },
   {
     name: 'Khajuraho',
-    image: 'https://picsum.photos/800/600?random=14',
+    image: 'https://picsum.photos/seed/khajuraho/800/600',
     mapLink: 'https://maps.app.goo.gl/X8CTWVCwNb3M7ANJA',
     description: 'Famous for its stunning temples adorned with intricate and erotic sculptures.'
   }
@@ -237,3 +238,5 @@ export const otherPlaces: Place[] = [
 
 
 export const CITIES = ['Jabalpur', 'Indore', 'Bhopal', 'Ujjain', 'Gwalior', 'Nagpur', 'Kota'];
+
+    
