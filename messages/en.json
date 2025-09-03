@@ -3,6 +3,7 @@
   "navigation": {
     "brand": "Royal Cabs",
     "home": "Home",
+    "explore": "Explore",
     "cars": "Our Cars",
     "contact": "Contact Us",
     "bookNow": "Book Now",
@@ -62,6 +63,11 @@
       "title": "Frequently Asked Questions!!",
       "subtitle": "Have questions? We have answers."
     }
+  },
+  "explorePage": {
+    "title": "Explore Nearby Destinations",
+    "subtitle": "Discover the beauty and heritage of Madhya Pradesh. We offer comfortable and reliable taxi services to all these amazing locations.",
+    "viewOnMap": "View on Map"
   },
   "carsPage": {
     "title": "Our Esteemed Fleet",

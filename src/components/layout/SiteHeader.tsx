@@ -20,6 +20,7 @@ export function SiteHeader() {
 
   const mainNav = [
     { title: t('home'), href: '/' },
+    { title: t('explore'), href: '/explore' },
     { title: t('cars'), href: '/cars' },
     { title: t('contact'), href: '/contact' },
   ];

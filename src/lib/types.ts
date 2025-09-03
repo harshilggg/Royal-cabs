@@ -22,3 +22,10 @@ export interface FAQ {
   question: string;
   answer: string;
 }
+
+export interface Place {
+  name: string;
+  image: string;
+  mapLink: string;
+  description: string;
+}
