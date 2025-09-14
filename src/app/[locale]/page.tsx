@@ -24,9 +24,11 @@ import { featuredCars, faqs, testimonials } from '@/lib/data';
 import { CarCard } from '@/components/CarCard';
 import { AnimateOnScroll } from '@/components/AnimateOnScroll';
 import { useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
 
-export default function Home({ params }: { params: { locale: string } }) {
-  const { locale } = params;
+export default function Home() {
+  const params = useParams();
+  const locale = params.locale as string;
   const t = useTranslations('home');
 
   return (

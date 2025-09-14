@@ -5,9 +5,11 @@ import { cars } from '@/lib/data';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { AnimateOnScroll } from '@/components/AnimateOnScroll';
+import { useParams } from 'next/navigation';
 
-export default function CarsPage({ params }: { params: { locale: string } }) {
-  const { locale } = params;
+export default function CarsPage() {
+  const params = useParams();
+  const locale = params.locale as string;
   const t = useTranslations('carsPage');
 
   return (

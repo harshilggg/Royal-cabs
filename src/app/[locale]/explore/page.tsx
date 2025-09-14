@@ -17,6 +17,7 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
+import { useParams } from 'next/navigation';
 
 const PlaceCard = ({ place, t }: { place: Place; t: any }) => {
   const bookingMessage = `Hi! I'd like to book a cab to ${place.name}.`;
@@ -57,8 +58,9 @@ const PlaceCard = ({ place, t }: { place: Place; t: any }) => {
 };
 
 
-export default function ExplorePage({ params }: { params: { locale: string } }) {
-  const { locale } = params;
+export default function ExplorePage() {
+  const params = useParams();
+  const locale = params.locale as string;
   const t = useTranslations('explorePage');
   const generalBookingMessage = "Hi! I'd like to book a trip to one of the destinations shown on your website.";
 
