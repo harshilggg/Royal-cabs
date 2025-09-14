@@ -18,6 +18,9 @@ export function SiteHeader() {
   const [open, setOpen] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
   const t = useTranslations('navigation');
+  const bookingMessage = "Hi! I'd like to book a cab.";
+  const whatsappUrl = `https://web.whatsapp.com/send?phone=917999114272&text=${encodeURIComponent(bookingMessage)}`;
+
 
   const mainNav = [
     { title: t('home'), href: '/' },
@@ -60,7 +63,7 @@ export function SiteHeader() {
             ))}
             <SettingsMenu />
             <Button asChild className="transition-transform hover:scale-105">
-                <a href="https://wa.me/917999114272?text=Hi!%20I'd%20like%20to%20book%20a%20cab." target="_blank" rel="noopener noreferrer">
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                     <Phone className="mr-2 h-4 w-4" /> {t('bookNow')}
                 </a>
             </Button>
@@ -102,7 +105,7 @@ export function SiteHeader() {
                       <SettingsMenu />
                     </div>
                     <Button asChild size="lg" className="w-full">
-                        <a href="https://wa.me/917999114272?text=Hi!%20I'd%20like%20to%20book%20a%20cab." target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>
+                        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>
                             <Phone className="mr-2 h-4 w-4" /> {t('bookOnWhatsApp')}
                         </a>
                     </Button>

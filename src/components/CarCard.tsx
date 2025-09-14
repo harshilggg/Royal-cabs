@@ -23,6 +23,7 @@ interface CarCardProps {
 export function CarCard({ car }: CarCardProps) {
   const t = useTranslations('carCard');
   const bookingMessage = `Hi! I'd like to book a cab (${car.name})`;
+  const whatsappUrl = `https://web.whatsapp.com/send?phone=917999114272&text=${encodeURIComponent(bookingMessage)}`;
 
   return (
     <Card className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 h-full group hover:-translate-y-2">
@@ -61,7 +62,7 @@ export function CarCard({ car }: CarCardProps) {
       </CardContent>
       <CardFooter className="p-6 pt-0 bg-secondary/30">
         <Button asChild className="w-full transition-transform hover:scale-105" variant="default">
-          <a href={`https://wa.me/917999114272?text=${encodeURIComponent(bookingMessage)}`} target="_blank" rel="noopener noreferrer">
+          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
             {t('bookNow')} <ArrowRight className="ml-2 h-4 w-4" />
           </a>
         </Button>

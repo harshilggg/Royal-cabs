@@ -21,6 +21,7 @@ import { useParams } from 'next/navigation';
 
 const PlaceCard = ({ place, t }: { place: Place; t: any }) => {
   const bookingMessage = `Hi! I'd like to book a cab to ${place.name}.`;
+  const whatsappUrl = `https://web.whatsapp.com/send?phone=917999114272&text=${encodeURIComponent(bookingMessage)}`;
   return (
     <Card className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 h-full group hover:-translate-y-2">
       <CardHeader className="p-0 relative">
@@ -48,7 +49,7 @@ const PlaceCard = ({ place, t }: { place: Place; t: any }) => {
           </a>
         </Button>
         <Button asChild className="w-full transition-transform hover:scale-105" variant="default">
-          <a href={`https://wa.me/917999114272?text=${encodeURIComponent(bookingMessage)}`} target="_blank" rel="noopener noreferrer">
+          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
             <Phone className="mr-2 h-4 w-4" /> {t('bookThisTrip')}
           </a>
         </Button>
@@ -63,6 +64,8 @@ export default function ExplorePage() {
   const locale = params.locale as string;
   const t = useTranslations('explorePage');
   const generalBookingMessage = "Hi! I'd like to book a trip to one of the destinations shown on your website.";
+  const generalWhatsappUrl = `https://web.whatsapp.com/send?phone=917999114272&text=${encodeURIComponent(generalBookingMessage)}`;
+
 
   return (
     <AnimateOnScroll>
@@ -84,7 +87,7 @@ export default function ExplorePage() {
         {/* Jabalpur Section */}
         <section className="mb-16">
           <div className="relative rounded-lg overflow-hidden mb-8 shadow-2xl">
-            <Image src="/8.jpg" alt="Kamaniy Gate, a famous landmark in Jabalpur" width={1200} height={400} data-ai-hint="historic gate" className="w-full h-auto object-cover"/>
+            <Image src="/8.jpg" alt="A scenic view of Bhedaghat's marble rocks in Jabalpur" width={1200} height={400} data-ai-hint="marble rocks river" className="w-full h-auto object-cover"/>
             <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
               <h2 className="text-4xl font-bold text-white drop-shadow-lg">{t('jabalpurTitle')}</h2>
             </div>
@@ -133,7 +136,7 @@ export default function ExplorePage() {
         <div className="text-center mt-16">
           <h3 className="text-2xl font-semibold mb-4">{t('finalCta.title')}</h3>
           <Button asChild size="lg" className="transition-transform hover:scale-105">
-            <a href={`https://wa.me/917999114272?text=${encodeURIComponent(generalBookingMessage)}`} target="_blank" rel="noopener noreferrer">
+            <a href={generalWhatsappUrl} target="_blank" rel="noopener noreferrer">
               {t('finalCta.button')} <ArrowRight className="ml-2 h-5 w-5" />
             </a>
           </Button>
