@@ -1,5 +1,3 @@
-# Firebase Studio
+Royal Cabs - Where Luxury Meets Budget !!!
 
-This is a NextJS starter in Firebase Studio.
-
-To get started, take a look at src/app/page.tsx.
+Premium Taxi Services across Madhya Pradesh. Unmatched comfort, reliability, and style
