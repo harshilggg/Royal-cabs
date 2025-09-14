@@ -26,7 +26,7 @@ const PlaceCard = ({ place, t }: { place: Place; t: any }) => {
         <div className="relative w-full h-56 overflow-hidden">
           <Image
             src={place.image}
-            alt={place.name}
+            alt={`Scenic view of ${place.name}, a popular tourist destination.`}
             data-ai-hint="tourist destination"
             fill
             className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -67,7 +67,7 @@ export default function ExplorePage() {
         <div className="text-center mb-12">
           <Image 
               src="/icons/royal.png" 
-              alt="Royal Cabs Logo" 
+              alt="Royal Cabs company logo" 
               width={100} 
               height={100} 
               className="mx-auto mb-6 rounded-lg"
@@ -81,7 +81,7 @@ export default function ExplorePage() {
         {/* Jabalpur Section */}
         <section className="mb-16">
           <div className="relative rounded-lg overflow-hidden mb-8 shadow-2xl">
-            <Image src="/8.jpg" alt="Jabalpur Landmark" width={1200} height={400} data-ai-hint="historic gate" className="w-full h-auto object-cover"/>
+            <Image src="/8.jpg" alt="Kamaniy Gate, a famous landmark in Jabalpur" width={1200} height={400} data-ai-hint="historic gate" className="w-full h-auto object-cover"/>
             <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
               <h2 className="text-4xl font-bold text-white drop-shadow-lg">{t('jabalpurTitle')}</h2>
             </div>
@@ -91,6 +91,7 @@ export default function ExplorePage() {
             className="w-full"
             plugins={[Autoplay({ delay: 5000, stopOnInteraction: true })]}
             opts={{ loop: true, align: 'start' }}
+            aria-label="Tourist places in Jabalpur"
           >
             <CarouselContent className="-ml-4">
               {jabalpurPlaces.map((place, index) => (
@@ -101,8 +102,8 @@ export default function ExplorePage() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 z-10" />
-            <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 z-10" />
+            <CarouselPrevious />
+            <CarouselNext />
           </Carousel>
         </section>
 
@@ -111,7 +112,7 @@ export default function ExplorePage() {
           <div className="text-center mb-12">
              <Image 
                 src="/icons/royal.png" 
-                alt="Royal Cabs Logo" 
+                alt="Royal Cabs company logo" 
                 width={100} 
                 height={100} 
                 className="mx-auto mb-6 rounded-lg"

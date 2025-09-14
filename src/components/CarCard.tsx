@@ -1,3 +1,4 @@
+
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -29,7 +30,7 @@ export function CarCard({ car }: CarCardProps) {
         <div className="relative w-full h-56 overflow-hidden">
           <Image
             src={car.images[0]}
-            alt={car.name}
+            alt={`Image of a ${car.name}, a ${car.type} available for booking.`}
             data-ai-hint="car exterior"
             fill
             className="object-cover group-hover:scale-105 transition-transform duration-500"

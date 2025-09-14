@@ -39,6 +39,7 @@ export default function CarDetailPage({ params }: { params: { slug: string } }) 
                 className="w-full rounded-lg overflow-hidden shadow-lg mb-6"
                 plugins={[Autoplay({ delay: 3000, stopOnInteraction: true })]}
                 opts={{ loop: true }}
+                aria-label={`Images of ${car.name}`}
               >
                 <CarouselContent>
                   {car.images.map((img, index) => (
@@ -51,8 +52,8 @@ export default function CarDetailPage({ params }: { params: { slug: string } }) 
                 </CarouselContent>
                 {car.images.length > 1 && (
                   <>
-                    <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-10" />
-                    <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-10" />
+                    <CarouselPrevious />
+                    <CarouselNext />
                   </>
                 )}
               </Carousel>

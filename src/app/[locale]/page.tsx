@@ -39,6 +39,7 @@ export default function Home() {
           muted
           playsInline
           className="absolute top-0 left-0 w-full h-full object-cover"
+          aria-label="Promotional video of a car driving through scenic landscapes"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent" />
         <div className="relative z-10 max-w-4xl px-4 flex flex-col items-center">
@@ -168,6 +169,7 @@ export default function Home() {
                 loop: true,
               }}
               className="w-full max-w-sm sm:max-w-xl md:max-w-4xl lg:max-w-6xl mx-auto"
+              aria-label="Customer Testimonials"
             >
               <CarouselContent>
                 {testimonials.map((testimonial, index) => (
@@ -189,7 +191,7 @@ export default function Home() {
                         <CardContent>
                           <p className="text-muted-foreground italic">"{testimonial.comment}"</p>
                           <div className="flex mt-4 text-accent">
-                            {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
+                            {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" aria-label="Star rating" />)}
                           </div>
                         </CardContent>
                       </Card>

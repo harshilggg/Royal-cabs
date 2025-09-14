@@ -19,7 +19,7 @@ export default function ContactPage() {
             <div className="text-center mb-12">
               <Image 
                 src="/icons/royal.png" 
-                alt="Royal Cabs Logo" 
+                alt="Royal Cabs company logo" 
                 width={100} 
                 height={100} 
                 className="mx-auto mb-6 rounded-lg"
