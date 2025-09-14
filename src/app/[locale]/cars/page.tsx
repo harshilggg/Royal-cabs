@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { AnimateOnScroll } from '@/components/AnimateOnScroll';
 
-export default function CarsPage() {
+export default function CarsPage({ params: { locale } }: { params: { locale: string } }) {
   const t = useTranslations('carsPage');
 
   return (

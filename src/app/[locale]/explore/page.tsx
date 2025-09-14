@@ -57,7 +57,7 @@ const PlaceCard = ({ place, t }: { place: Place; t: any }) => {
 };
 
 
-export default function ExplorePage() {
+export default function ExplorePage({ params: { locale } }: { params: { locale: string } }) {
   const t = useTranslations('explorePage');
   const generalBookingMessage = "Hi! I'd like to book a trip to one of the destinations shown on your website.";
 

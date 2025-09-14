@@ -105,12 +105,11 @@ export const viewport: Viewport = {
 
 export default function RootLayout({
   children,
+  params: { locale }
 }: Readonly<{
   children: React.ReactNode;
+  params: { locale: string };
 }>) {
-
-  const locale = use(getLocale());
-  const messages = use(getMessages());
   
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -169,26 +168,7 @@ export default function RootLayout({
           fontPTSans.variable
         )}
       >
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="light"
-            disableTransitionOnChange
-          >
-            <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:px-4 focus:py-2 focus:bg-background focus:text-foreground">
-              Skip to main content
-            </a>
-            <BubbleBackground />
-            <div className="relative flex min-h-dvh flex-col bg-transparent">
-              <SiteHeader />
-              <main id="main-content" className="flex-1">{children}</main>
-              <SiteFooter />
-            </div>
-            <FloatingWhatsApp />
-            <Toaster />
-            <GlobalAudio />
-          </ThemeProvider>
-        </NextIntlClientProvider>
+        {children}
       </body>
     </html>
   );
