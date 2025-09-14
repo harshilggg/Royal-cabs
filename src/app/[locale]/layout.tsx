@@ -16,6 +16,7 @@ export default function LocaleLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
+  // Enable static rendering
   setRequestLocale(locale);
   const messages = useMessages();
   
