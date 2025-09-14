@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import { Menu, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { cn } from '@/lib/utils';
+import { cn, getWhatsAppUrl } from '@/lib/utils';
 import * as React from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
@@ -19,7 +19,7 @@ export function SiteHeader() {
   const [scrolled, setScrolled] = React.useState(false);
   const t = useTranslations('navigation');
   const bookingMessage = "Hi! I'd like to book a cab.";
-  const whatsappUrl = `https://api.whatsapp.com/send?phone=917999114272&text=${encodeURIComponent(bookingMessage)}`;
+  const whatsappUrl = getWhatsAppUrl(bookingMessage);
 
 
   const mainNav = [

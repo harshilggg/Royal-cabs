@@ -15,6 +15,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import type { Car } from '@/lib/types';
 import { useTranslations } from 'next-intl';
+import { getWhatsAppUrl } from '@/lib/utils';
 
 interface CarCardProps {
   car: Car;
@@ -23,7 +24,7 @@ interface CarCardProps {
 export function CarCard({ car }: CarCardProps) {
   const t = useTranslations('carCard');
   const bookingMessage = `Hi! I'd like to book a cab (${car.name})`;
-  const whatsappUrl = `https://api.whatsapp.com/send?phone=917999114272&text=${encodeURIComponent(bookingMessage)}`;
+  const whatsappUrl = getWhatsAppUrl(bookingMessage);
 
   return (
     <Card className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 h-full group hover:-translate-y-2">

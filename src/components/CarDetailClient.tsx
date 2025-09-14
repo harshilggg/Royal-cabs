@@ -16,12 +16,13 @@ import {
 import Autoplay from 'embla-carousel-autoplay';
 import { AnimateOnScroll } from '@/components/AnimateOnScroll';
 import type { Car } from '@/lib/types';
+import { getWhatsAppUrl } from '@/lib/utils';
 
 export function CarDetailClient({ car }: { car: Car }) {
   const t = useTranslations('carDetailPage');
 
   const bookingMessage = `Hi! I'd like to book a cab (${car.name})`;
-  const whatsappUrl = `https://api.whatsapp.com/send?phone=917999114272&text=${encodeURIComponent(bookingMessage)}`;
+  const whatsappUrl = getWhatsAppUrl(bookingMessage);
 
   return (
     <AnimateOnScroll>

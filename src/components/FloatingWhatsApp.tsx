@@ -1,9 +1,10 @@
 
+import { getWhatsAppUrl } from '@/lib/utils';
 import { Phone } from 'lucide-react';
 
 export function FloatingWhatsApp() {
   const bookingMessage = "Hi! I'd like to book a cab.";
-  const whatsappUrl = `https://api.whatsapp.com/send?phone=917999114272&text=${encodeURIComponent(bookingMessage)}`;
+  const whatsappUrl = getWhatsAppUrl(bookingMessage);
   return (
     <div className="floating-wpp">
       <a
