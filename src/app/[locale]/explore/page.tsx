@@ -21,7 +21,7 @@ import { useParams } from 'next/navigation';
 
 const PlaceCard = ({ place, t }: { place: Place; t: any }) => {
   const bookingMessage = `Hi! I'd like to book a cab to ${place.name}.`;
-  const whatsappUrl = `https://wa.me/917999114272?text=${encodeURIComponent(bookingMessage)}`;
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=917999114272&text=${encodeURIComponent(bookingMessage)}`;
   return (
     <Card className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 h-full group hover:-translate-y-2">
       <CardHeader className="p-0 relative">
@@ -64,7 +64,7 @@ export default function ExplorePage() {
   const locale = params.locale as string;
   const t = useTranslations('explorePage');
   const generalBookingMessage = "Hi! I'd like to book a trip to one of the destinations shown on your website.";
-  const generalWhatsappUrl = `https://wa.me/917999114272?text=${encodeURIComponent(generalBookingMessage)}`;
+  const generalWhatsappUrl = `https://api.whatsapp.com/send?phone=917999114272&text=${encodeURIComponent(generalBookingMessage)}`;
 
 
   return (

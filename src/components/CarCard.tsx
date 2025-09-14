@@ -23,7 +23,7 @@ interface CarCardProps {
 export function CarCard({ car }: CarCardProps) {
   const t = useTranslations('carCard');
   const bookingMessage = `Hi! I'd like to book a cab (${car.name})`;
-  const whatsappUrl = `https://wa.me/917999114272?text=${encodeURIComponent(bookingMessage)}`;
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=917999114272&text=${encodeURIComponent(bookingMessage)}`;
 
   return (
     <Card className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 h-full group hover:-translate-y-2">
