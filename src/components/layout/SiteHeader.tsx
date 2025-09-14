@@ -19,7 +19,7 @@ export function SiteHeader() {
   const [scrolled, setScrolled] = React.useState(false);
   const t = useTranslations('navigation');
   const bookingMessage = "Hi! I'd like to book a cab.";
-  const whatsappUrl = `https://web.whatsapp.com/send?phone=917999114272&text=${encodeURIComponent(bookingMessage)}`;
+  const whatsappUrl = `https://wa.me/917999114272?text=${encodeURIComponent(bookingMessage)}`;
 
 
   const mainNav = [
