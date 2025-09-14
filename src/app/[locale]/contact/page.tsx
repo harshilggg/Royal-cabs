@@ -8,7 +8,8 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { AnimateOnScroll } from '@/components/AnimateOnScroll';
 
-export default function ContactPage({ params: { locale } }: { params: { locale: string } }) {
+export default function ContactPage({ params }: { params: { locale: string } }) {
+  const { locale } = params;
   const t = useTranslations('contactPage');
 
   return (

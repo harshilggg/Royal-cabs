@@ -25,7 +25,8 @@ import { CarCard } from '@/components/CarCard';
 import { AnimateOnScroll } from '@/components/AnimateOnScroll';
 import { useTranslations } from 'next-intl';
 
-export default function Home({ params: { locale } }: { params: { locale: string } }) {
+export default function Home({ params }: { params: { locale: string } }) {
+  const { locale } = params;
   const t = useTranslations('home');
 
   return (
